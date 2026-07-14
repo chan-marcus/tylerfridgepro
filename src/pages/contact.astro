@@ -7,11 +7,15 @@ import { CITIES } from '../data/cities';
   title={`Contact | 24/7 Dispatch | ${SITE.brand}`}
   description={`Reach ${SITE.brand} dispatch 24/7 for commercial refrigeration emergencies across ${SITE.serviceRegion} and East Texas. Call ${SITE.phoneVanity}, open now.`}
 >
+  <section class="page-hero" style="background-image:url(/generated/page-contact.svg);background-size:cover;background-position:center;">
+    <div class="wrap">
+      <span class="badge">Fastest path</span>
+      <h1>If it is warming up, call.</h1>
+    </div>
+  </section>
   <section>
     <div class="wrap contact-grid">
       <div>
-        <span class="eyebrow">Fastest path</span>
-        <h1>If it is warming up, call.</h1>
         <p>An emergency is not an email. Dispatch answers the phone 24 hours a day, every day of the year, and a call gets a tech moving in minutes. Everything else on this page is for the non-urgent stuff.</p>
         <div class="big-call">
           <a class="btn-call" href={`tel:${SITE.phone}`}>Call {SITE.phoneVanity}</a>

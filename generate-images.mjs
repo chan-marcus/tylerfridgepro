@@ -207,6 +207,18 @@ for (const service of services) {
   }
 }
 
+// Per-city backdrops (city pages).
+for (const city of cities) {
+  const cityName = city.name || city.title || city.slug;
+  const citySlug = city.slug || slugify(cityName);
+  jobs.push({ file: `${citySlug}.svg`, key: `city-${citySlug}`, label: `Commercial refrigeration in ${cityName}` });
+}
+
+// Named backdrops for the home page and the section/index pages.
+for (const page of ["home", "services", "areas", "about", "contact", "blog"]) {
+  jobs.push({ file: `page-${page}.svg`, key: `page-${page}`, label: "Commercial refrigeration" });
+}
+
 // ----- run -------------------------------------------------------------------
 
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });

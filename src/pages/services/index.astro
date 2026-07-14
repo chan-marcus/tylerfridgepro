@@ -19,11 +19,15 @@ const breadcrumb = {
   description={`Every commercial refrigeration service available 24/7 across ${SITE.serviceRegion} and East Texas: walk-in coolers, freezers, ice machines, reach-ins, maintenance, installation, and emergency repair.`}
   schema={[breadcrumb]}
 >
-  <section>
+  <section class="page-hero" style="background-image:url(/generated/page-services.svg);background-size:cover;background-position:center;">
     <div class="wrap">
-      <span class="eyebrow">24/7 across East Texas</span>
+      <span class="badge">24/7 across East Texas</span>
       <h1>Refrigeration services</h1>
       <p class="lede">Refrigeration fails in a lot of ways. Pick the one you are dealing with; each page covers what the tech does, what tends to cause it, and how fast you can be back in temperature.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
       <div class="card-grid">
         {SERVICES.map((s) => (
           <a class="card" href={`/services/${s.slug}/`}>

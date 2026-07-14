@@ -18,11 +18,15 @@ const breadcrumb = {
   description={`24/7 commercial refrigeration dispatch across ${SITE.serviceRegion} and East Texas: ${CITIES.map((c) => c.name).join(', ')}.`}
   schema={[breadcrumb]}
 >
-  <section>
+  <section class="page-hero" style="background-image:url(/generated/page-areas.svg);background-size:cover;background-position:center;">
     <div class="wrap">
-      <span class="eyebrow">Tyler &amp; East Texas</span>
+      <span class="badge">Tyler &amp; East Texas</span>
       <h1>Where techs respond</h1>
       <p class="lede">Local techs across East Texas, not routed in from Dallas. Each city page covers the refrigeration realities there, from brutal summer heat loads to hard-water scale on ice machines to travel-stop coolers that never stop running.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
       <div class="card-grid">
         {CITIES.map((c) => (
           <a class="card" href={`/areas/${c.slug}/`}>
