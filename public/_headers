@@ -1,0 +1,28 @@
+# Cloudflare Pages custom headers — caching for static assets.
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+
+# Fingerprinted Astro build assets (content hash in the filename).
+# Safe to cache forever and never revalidate — a content change = a new URL.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Generated SVG hero backdrops. Fixed filenames (not hashed), so cache for a
+# week and revalidate in the background instead of pinning them for a year.
+/generated/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Icons, favicons, social image, and web manifest.
+/favicon.svg
+  Cache-Control: public, max-age=604800
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+/icon-192.png
+  Cache-Control: public, max-age=604800
+/icon-512.png
+  Cache-Control: public, max-age=604800
+/og.png
+  Cache-Control: public, max-age=604800
+/site.webmanifest
+  Cache-Control: public, max-age=86400
