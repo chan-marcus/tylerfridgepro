@@ -9,6 +9,7 @@ export interface Service {
   icon: string;
   h1: string;
   intro: string[];      // paragraphs
+  signs: string[];      // warning signs / when to call
   bullets: { title: string; body: string }[];
   faq: { q: string; a: string }[];
 }
@@ -20,6 +21,13 @@ export const SERVICES: Service[] = [
     short: 'Warm boxes, iced coils, and short-cycling compressors on walk-in coolers, diagnosed and fixed fast.',
     icon: 'commercial',
     h1: 'Walk-In Cooler Repair in Tyler, TX',
+    signs: [
+      'The box is holding above 41 degrees or climbing through the day',
+      'Ice building up on the evaporator coil or water pooling on the floor',
+      'The compressor runs constantly and never cycles off',
+      'A warm spot near the door or product spoiling faster than usual',
+      'A musty smell, or the unit suddenly running much louder'
+    ],
     intro: [
       'A walk-in that drifts above 41 degrees puts every dollar of product inside it on a clock, and in an East Texas summer that clock runs fast. Most walk-in cooler failures trace back to a handful of causes: a failing compressor, a refrigerant leak, an iced-up evaporator coil, a stuck defrost cycle, or a condenser fan and coil choked with grease and dust.',
       'A tech arrives, gets an accurate box temperature and pressures, and finds the actual fault instead of just topping off refrigerant and leaving. The goal is a stable, in-spec box before your next inspection and before your inventory takes the hit.'
@@ -42,6 +50,13 @@ export const SERVICES: Service[] = [
     short: 'Undercounters, prep tables, and reach-in merchandisers that will not hold temp, back in service quickly.',
     icon: 'appliance',
     h1: 'Reach-In Cooler & Freezer Repair',
+    signs: [
+      'The unit runs but will not pull down to temperature',
+      'Frost or ice building up inside the cabinet',
+      'A torn gasket or a door that will not seal',
+      'The compressor cycling on and off rapidly',
+      'Puddles under the unit or a fan that has gone quiet'
+    ],
     intro: [
       'Reach-ins, undercounter units, prep tables, and glass-door merchandisers are the workhorses of a commercial kitchen, and they fail in ways that are easy to miss until food is at risk. Worn door gaskets, frosted-over evaporators, failing start components, and dirty condenser coils are the usual suspects.',
       'A tech services the whole unit, not just the symptom: gasket seal, coil condition, fan operation, thermostat calibration, and refrigerant charge. A reach-in that holds a steady temperature is a reach-in that passes inspection and keeps product safe.'
@@ -64,6 +79,13 @@ export const SERVICES: Service[] = [
     short: 'Low output, thin or cloudy cubes, and no-ice failures on commercial ice machines, cleared fast.',
     icon: 'pipe',
     h1: 'Commercial Ice Machine Repair in Tyler',
+    signs: [
+      'Ice comes out cloudy, soft, or smaller than it used to',
+      'Production has dropped and you run out during a rush',
+      'The machine will not finish a harvest cycle',
+      'Water leaking around the base or the bin',
+      'A slimy film or an off taste in the ice'
+    ],
     intro: [
       'When the ice machine goes down, a bar or restaurant feels it within the hour. East Texas water is hard, and scale is the number one enemy of an ice machine: it coats the evaporator, slows production, and produces thin, cloudy, or misshapen cubes long before the unit stops entirely.',
       'A tech addresses both the immediate failure and the cause, whether that is scale buildup, a water inlet or float problem, a failing water pump, or a refrigeration fault. Regular descaling and water treatment keep the machine producing at rated capacity.'
@@ -86,6 +108,13 @@ export const SERVICES: Service[] = [
     short: 'Rising freezer temps, heavy frost, and failed defrost on walk-in freezers, fixed before product thaws.',
     icon: 'crawl',
     h1: 'Walk-In Freezer Repair',
+    signs: [
+      'The freezer temperature is rising toward or above zero',
+      'Heavy frost or a wall of ice on the evaporator coil',
+      'A door frozen shut or an iced-over frame',
+      'The floor buckling or slick with ice',
+      'The unit running nonstop without a defrost cycle'
+    ],
     intro: [
       'A walk-in freezer holds thousands of dollars of product below zero, so a failure is expensive fast. Freezers add complications a cooler does not have: a defrost system that has to work perfectly, door heaters that prevent ice-ups, and the constant battle against frost on the evaporator coil.',
       'A tech checks the full picture: refrigerant charge and leaks, defrost heaters and timers, evaporator and condenser condition, door gaskets and heaters, and the controls tying it together. The target is a freezer holding steady at temperature with a defrost cycle that keeps the coil clear.'
@@ -108,6 +137,13 @@ export const SERVICES: Service[] = [
     short: 'Scheduled coil cleaning, gasket checks, and system tune-ups that stop breakdowns before they start.',
     icon: 'claim',
     h1: 'Refrigeration Preventive Maintenance',
+    signs: [
+      'It has been more than a year since your last service',
+      'Energy bills creeping up with no change in use',
+      'Condenser coils you can see packed with dust and grease',
+      'Units getting louder, icing more, or struggling in the heat',
+      'A health inspection coming up on the calendar'
+    ],
     intro: [
       'The cheapest refrigeration repair is the breakdown that never happens. Most emergency failures, dirty condensers, worn gaskets, low refrigerant, clogged drains, come from problems that were visible and fixable weeks earlier. A maintenance schedule catches them on your timeline instead of during Friday dinner service.',
       'Scheduled visits cover coil cleaning, gasket and door inspection, refrigerant and electrical checks, drain clearing, and temperature verification across your coolers, freezers, and ice machines. Consistent maintenance also protects you at health inspection time.'
@@ -130,6 +166,13 @@ export const SERVICES: Service[] = [
     short: '24/7 response when a cooler, freezer, or ice machine goes down and product is on the line.',
     icon: 'storm',
     h1: 'Emergency Refrigeration Service in Tyler, TX',
+    signs: [
+      'A cooler or freezer climbing above safe temperature right now',
+      'A unit that has stopped running entirely',
+      'A refrigerant smell or water pooling fast',
+      'Product at risk with no backup box to move it to',
+      'A breaker that keeps tripping on a refrigeration circuit'
+    ],
     intro: [
       'Refrigeration does not fail on a schedule. It fails on the hottest Saturday of the year, overnight before a delivery, or in the middle of a full dining room. When it does, every hour of downtime is spoiling inventory and threatening a health-code violation.',
       'Emergency dispatch is 24/7, including nights, weekends, and holidays. A tech local to East Texas arrives, diagnoses the failure, and gets the box back in temperature, whether that is a walk-in, a reach-in, a freezer, or an ice machine.'
@@ -152,6 +195,13 @@ export const SERVICES: Service[] = [
     short: 'New walk-ins, reach-ins, and ice machines sized, installed, and started up right the first time.',
     icon: 'extract',
     h1: 'Commercial Refrigeration Installation',
+    signs: [
+      'A unit that needs repair more often than it runs reliably',
+      'A box that never quite keeps up with your volume',
+      'Equipment past its service life or costing more to run',
+      'A new build-out, remodel, or menu change',
+      'A used unit you bought that needs commissioning'
+    ],
     intro: [
       'A refrigeration system that is installed right runs quieter, lasts longer, and costs less to operate for its entire life. Wrong sizing, sloppy line sets, poor drainage, or a rushed startup create problems that haunt a kitchen for years. Doing it correctly the first time is the whole game.',
       'From a single reach-in to a full walk-in cooler and freezer buildout, installation covers proper sizing, refrigerant line work, electrical, drainage, and a documented startup with verified temperatures. New equipment gets commissioned to run at spec from day one.'
@@ -174,6 +224,13 @@ export const SERVICES: Service[] = [
     short: 'Open merchandisers, deli and grocery display cases, and glass-door coolers that will not hold temp or keep fogging over.',
     icon: 'appliance',
     h1: 'Display Case & Merchandiser Repair in Tyler, TX',
+    signs: [
+      'The glass fogs, sweats, or drips onto product',
+      'One end of the case runs warmer than the other',
+      'Frost or ice building on the coil or the shelves',
+      'The case runs but will not hold a safe temperature',
+      'Product on display spoiling or looking tired fast'
+    ],
     intro: [
       'A refrigerated display case sells product while it cools it, so when it drifts warm or fogs over you lose the sale and risk the food at the same time. Open grab-and-go merchandisers, deli and meat cases, bakery cases, and glass-door beverage coolers all sit in the sweet spot for trouble: constant door use, warm store air spilling in, and condenser coils packed with dust behind the kick plate.',
       'A tech gets the case back into the safe zone and keeps the glass clear, checking the refrigerant charge, evaporator and condenser coils, the defrost cycle, anti-sweat heaters, fans, and door gaskets so the product stays cold and looks the part.'
