@@ -17,7 +17,7 @@ export const CITIES: City[] = [
     name: 'Tyler',
     county: 'Smith County',
     short: 'The Rose City hub: restaurants, C-stores, and markets that all live or die by their refrigeration.',
-    h1: 'Commercial Refrigeration in Tyler, TX',
+    h1: 'Commercial Refrigeration Repair in Tyler, TX',
     intro: [
       'Tyler is the commercial heart of East Texas, and its restaurants, convenience stores, grocers, and bars all run on refrigeration that has to survive brutal Piney Woods summers. From the busy South Broadway corridor to the Old Bullard Road restaurant cluster and downtown around the square, a warm walk-in on a July afternoon is an emergency measured in inventory dollars per hour.',
       'Techs dispatched in Tyler know the local mix: high-volume kitchens near the mall and Loop 323, C-store cases along the highways, and the hard water that scales up ice machines all over town. Response is local, 24/7, and fast.'
@@ -34,7 +34,7 @@ export const CITIES: City[] = [
     name: 'Whitehouse',
     county: 'Smith County',
     short: 'Growing bedroom community south of Tyler with a steady base of local restaurants and stores.',
-    h1: 'Commercial Refrigeration in Whitehouse, TX',
+    h1: 'Commercial Refrigeration Repair in Whitehouse, TX',
     intro: [
       'Whitehouse sits just south of Tyler along Highway 110, and its steady residential growth has pulled in the restaurants, convenience stores, and markets that come with it. Those businesses run on the same commercial refrigeration as their big-city neighbors, and they need the same fast response when a cooler or ice machine goes down.',
       'Techs cover Whitehouse as part of the greater Tyler service area, so a call from a kitchen off Main Street or a C-store on 110 gets the same 24/7 dispatch and local arrival times.'
@@ -51,7 +51,7 @@ export const CITIES: City[] = [
     name: 'Bullard',
     county: 'Smith County',
     short: 'Fast-growing town on the Smith and Cherokee county line with new commercial development.',
-    h1: 'Commercial Refrigeration in Bullard, TX',
+    h1: 'Commercial Refrigeration Repair in Bullard, TX',
     intro: [
       'Bullard straddles the Smith and Cherokee county line south of Tyler, and its rapid residential growth along Highway 69 has brought a wave of new restaurants, convenience stores, and markets. New buildings mean new equipment, but new equipment still needs correct installation, startup, and maintenance to run right through an East Texas summer.',
       'Techs serving Bullard handle everything from commissioning a new walk-in in a fresh buildout to keeping an established kitchen off Highway 69 running through the heat. Dispatch is 24/7 and local to the area.'
@@ -68,7 +68,7 @@ export const CITIES: City[] = [
     name: 'Lindale',
     county: 'Smith County',
     short: 'I-20 crossroads town with highway travel-stop coolers, restaurants, and a busy commercial strip.',
-    h1: 'Commercial Refrigeration in Lindale, TX',
+    h1: 'Commercial Refrigeration Repair in Lindale, TX',
     intro: [
       'Lindale sits where Highway 69 meets Interstate 20 north of Tyler, and that crossroads brings travel-stop convenience stores, chain and local restaurants, and a growing commercial strip, all of it packed with coolers, freezers, and ice machines. Highway locations run their refrigeration around the clock, which means failures happen at every hour.',
       'Techs cover Lindale as part of the Tyler service area, with 24/7 dispatch for the C-stores along I-20 and the restaurants and markets in and around downtown.'
@@ -85,7 +85,7 @@ export const CITIES: City[] = [
     name: 'Chandler',
     county: 'Henderson County',
     short: 'Lake Palestine gateway in Henderson County with seasonal restaurants and marina-area stores.',
-    h1: 'Commercial Refrigeration in Chandler, TX',
+    h1: 'Commercial Refrigeration Repair in Chandler, TX',
     intro: [
       'Chandler sits in Henderson County on the western approach to Lake Palestine, and its restaurants, bait-and-tackle stores, and lakeside markets see a seasonal rush that leans hard on refrigeration. Summer weekends bring the crowds and the heat at the same time, exactly when a cooler or ice machine is most likely to give out.',
       'Techs serving Chandler cover the Highway 31 corridor and the lake-area businesses, with 24/7 dispatch for the peak-season failures that come with a full house and a hot afternoon.'
@@ -102,7 +102,7 @@ export const CITIES: City[] = [
     name: 'Flint',
     county: 'Smith County',
     short: 'Lake Palestine community just south of Tyler with convenience stores and local eateries.',
-    h1: 'Commercial Refrigeration in Flint, TX',
+    h1: 'Commercial Refrigeration Repair in Flint, TX',
     intro: [
       'Flint spreads along the eastern side of Lake Palestine just south of Tyler, an unincorporated Smith County community whose convenience stores, local restaurants, and lake-area markets all depend on reliable refrigeration. The mix of highway C-stores on Highway 155 and seasonal lake traffic keeps coolers and ice machines working hard.',
       'Techs reach Flint quickly as part of the greater Tyler service area, handling everything from a warm walk-in at a local kitchen to a scaled-up ice machine at a lakeside store, 24/7.'
@@ -119,7 +119,7 @@ export const CITIES: City[] = [
     name: 'Arp',
     county: 'Smith County',
     short: 'Small Smith County town east of Tyler where local stores and diners need dependable cold.',
-    h1: 'Commercial Refrigeration in Arp, TX',
+    h1: 'Commercial Refrigeration Repair in Arp, TX',
     intro: [
       'Arp is a small Smith County town east of Tyler along Highway 135, the kind of community where a single grocery, a diner, and a couple of convenience stores anchor Main Street, and every one of them runs on refrigeration that has to hold up through the summer. For a small operator, one failed cooler can put the whole day at risk.',
       'Techs serve Arp as part of the Tyler service area, so even out here a warm walk-in or a down ice machine gets local, 24/7 response instead of a long wait for someone to drive in.'
@@ -136,7 +136,7 @@ export const CITIES: City[] = [
     name: 'Winona',
     county: 'Smith County',
     short: 'I-20 town northeast of Tyler with truck-stop coolers and highway convenience stores.',
-    h1: 'Commercial Refrigeration in Winona, TX',
+    h1: 'Commercial Refrigeration Repair in Winona, TX',
     intro: [
       'Winona sits along Interstate 20 northeast of Tyler, and its position on the highway brings truck stops, convenience stores, and roadside restaurants, all running coolers, freezers, and high-volume ice machines nonstop. Highway businesses never really close, so their refrigeration never gets a break, and neither can the response when it fails.',
       'Techs cover Winona as part of the Tyler service area, with 24/7 dispatch for the I-20 travel stops and the local stores and kitchens around town.'
