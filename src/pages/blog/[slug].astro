@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { SITE } from '../../config/site';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<Base title={`${SITE.brand} | ${post.data.title}`} description={post.data.description}>
+  <section>
+    <div class="wrap">
+      <nav class="crumbs mono" aria-label="Breadcrumb">
+        <a href="/">HOME</a> / <a href="/blog/">GUIDES</a>
+      </nav>
+      <p class="mono post-date">{post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).toUpperCase()}</p>
+      <article class="post">
+        <h1>{post.data.title}</h1>
+        <Content />
+      </article>
+      <a class="btn-call" href={`tel:${SITE.phone}`}>Call {SITE.phoneVanity}</a>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+
+<style>
+  .crumbs { font-size: 0.68rem; color: var(--silt); margin-bottom: 1.5rem; display: block; }
+  .crumbs a { color: var(--silt); text-decoration: none; }
+  .crumbs a:hover { color: var(--cyan); }
+  .post-date { font-size: 0.65rem; margin-bottom: 0.8rem; }
+  .post { max-width: 44em; margin-bottom: 2.5rem; }
+  .post h1 { text-transform: none; font-stretch: 95%; font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+  .post :global(h2) { margin-top: 1.9em; margin-bottom: 0.5em; text-transform: none; font-stretch: 100%; font-size: 1.45rem; }
+  .post :global(p) { margin-top: 1em; color: #33454f; font-size: 1.04rem; line-height: 1.8; }
+  .post :global(ul), .post :global(ol) { padding-left: 1.3em; margin-top: 0.8em; }
+  .post :global(li) { margin-top: 0.5em; color: #33454f; line-height: 1.75; }
+  .post :global(li strong), .post :global(p strong) { color: var(--paper); }
+  .post :global(a) { color: var(--cyan); }
+</style>

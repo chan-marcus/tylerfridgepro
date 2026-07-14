@@ -1,0 +1,165 @@
+---
+import Base from '../../layouts/Base.astro';
+import ServiceIcon from '../../components/ServiceIcon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { SITE } from '../../config/site';
+import { SERVICES } from '../../data/services';
+import { CITIES } from '../../data/cities';
+
+export function getStaticPaths() {
+  return SERVICES.map((s) => ({ params: { slug: s.slug }, props: { service: s } }));
+}
+
+const { service } = Astro.props;
+const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 4);
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  serviceType: service.name,
+  provider: { '@id': SITE.domain + '/#business' },
+  areaServed: CITIES.map((c) => c.name + ', ' + SITE.state),
+  availableChannel: {
+    '@type': 'ServiceChannel',
+    servicePhone: { '@type': 'ContactPoint', telephone: SITE.phone, contactType: 'emergency dispatch' }
+  }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: service.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a }
+  }))
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: SITE.domain + '/services/' },
+    { '@type': 'ListItem', position: 3, name: service.name, item: SITE.domain + '/services/' + service.slug + '/' }
+  ]
+};
+---
+<Base
+  title={`${service.name} | 24/7 | ${SITE.brand}`}
+  description={`${service.short} Serving ${SITE.serviceRegion} and East Texas. Open now, call ${SITE.phoneVanity}.`}
+  schema={[serviceSchema, faqSchema, breadcrumb]}
+>
+  <section class="page-hero svc-hero" style={`background-image:url(/generated/${service.slug}.svg);background-size:cover;background-position:center;`}>
+    <div class="wrap">
+      <nav class="crumbs mono" aria-label="Breadcrumb">
+        <a href="/">HOME</a> / <a href="/services/">SERVICES</a> / <span>{service.name.toUpperCase()}</span>
+      </nav>
+      <span class="badge"><span class="open-dot" aria-hidden="true"></span> 24/7 Emergency Dispatch &middot; {SITE.serviceRegion}</span>
+      <div class="svc-head">
+        <div class="icon-tile"><ServiceIcon icon={service.icon} /></div>
+        <h1>{service.h1}</h1>
+      </div>
+      {service.intro.map((p) => <p class="body-p">{p}</p>)}
+      <div class="svc-actions">
+        <a class="btn-call" href={`tel:${SITE.phoneTel}`}>Call {SITE.phoneVanity}</a>
+        <a class="btn-ghost" href="/areas/">Service areas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-deep">
+    <div class="wrap">
+      <h2>What the tech handles</h2>
+      <div class="bullet-grid">
+        {service.bullets.map((b) => (
+          <div class="bullet">
+            <h3>{b.title}</h3>
+            <p>{b.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Common questions</h2>
+      <div class="faq-list">
+        {service.faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand heading={`Need ${service.name.toLowerCase()} tonight?`} />
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Serving {SITE.serviceRegion} &amp; East Texas</span>
+      <h2>{service.name} near you</h2>
+      <div class="nearby">
+        {CITIES.map((c) => <a href={`/services/${service.slug}/${c.slug}/`}>{service.name} in {c.name}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Related services</span>
+      <h2>Refrigeration problems travel in packs</h2>
+      <div class="card-grid">
+        {others.map((s) => (
+          <a class="card" href={`/services/${s.slug}/`}>
+            <ServiceIcon icon={s.icon} />
+            <h3>{s.name}</h3>
+            <p>{s.short}</p>
+            <span class="card-cta">DETAILS &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .crumbs { font-size: 0.68rem; margin-bottom: 1.6rem; }
+  .crumbs a { text-decoration: none; }
+  .svc-head { display: flex; gap: 1.2rem; align-items: center; margin-bottom: 1.4rem; }
+  .body-p { max-width: 68ch; margin-top: 1.1rem; }
+  .svc-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-top: 1.8rem; }
+  .nearby { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+  .nearby a {
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 0.45rem 1.1rem; text-decoration: none; color: var(--paper);
+    font-weight: 600; font-size: 0.92rem; background: #fff;
+  }
+  .nearby a:hover { border-color: var(--primary); color: var(--primary-deep); }
+
+  .bullet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .bullet { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; background: var(--panel); }
+  .bullet p { margin-top: 0.4rem; font-size: 0.95rem; }
+
+  .faq-list { margin-top: 2rem; max-width: 780px; }
+  details {
+    border: 1px solid var(--line); border-radius: 8px;
+    padding: 1rem 1.2rem; margin-bottom: 0.7rem; background: var(--deep);
+  }
+  summary {
+    cursor: pointer; font-weight: 700; color: var(--paper); list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  summary::after { content: '+'; color: var(--cyan); font-family: var(--font-display); font-size: 1.3rem; }
+  details[open] summary::after { content: '\2212'; }
+  details p { margin-top: 0.8rem; font-size: 0.97rem; }
+
+  @media (max-width: 700px) {
+    .bullet-grid { grid-template-columns: 1fr; }
+    .svc-head { flex-direction: column; }
+  }
+</style>

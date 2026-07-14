@@ -1,0 +1,77 @@
+---
+// Drying phase: flood-cut wall, air mover, LGR dehumidifier, moisture meter check.
+---
+<svg class="dry-scene" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a technician diagnosing commercial refrigeration equipment">
+  <rect width="640" height="360" fill="#081722"/>
+  <rect x="30" y="24" width="580" height="290" rx="6" fill="#102a38"/>
+  <!-- flood cut: bottom 2ft of drywall removed, studs exposed -->
+  <rect x="30" y="230" width="360" height="84" fill="#0c2230"/>
+  <g stroke="#8a6a48" stroke-width="10">
+    <line x1="70" y1="230" x2="70" y2="314"/>
+    <line x1="130" y1="230" x2="130" y2="314"/>
+    <line x1="190" y1="230" x2="190" y2="314"/>
+    <line x1="250" y1="230" x2="250" y2="314"/>
+    <line x1="310" y1="230" x2="310" y2="314"/>
+    <line x1="370" y1="230" x2="370" y2="314"/>
+  </g>
+  <line x1="30" y1="230" x2="390" y2="230" stroke="#3ec6d8" stroke-width="3" stroke-dasharray="6 5" opacity="0.8"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#3ec6d8">
+    <text x="44" y="218" opacity="0.9">FLOOD CUT 24&quot;</text>
+  </g>
+  <!-- air mover (snail fan) -->
+  <g>
+    <path d="M120 314 a34 34 0 0 1 34 -34 h30 a12 12 0 0 1 12 12 v22 Z" fill="#ffd23e"/>
+    <circle cx="154" cy="292" r="14" fill="#102a38"/>
+    <circle cx="154" cy="292" r="14" stroke="#0c2230" stroke-width="3"/>
+    <path d="M154 282 v20 M144 292 h20" stroke="#0c2230" stroke-width="3"/>
+    <!-- airflow -->
+    <g stroke="#3ec6d8" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+      <path d="M200 290 q24 -4 44 -18"/>
+      <path d="M200 300 q30 0 56 -10"/>
+      <path d="M198 308 q34 4 64 -2"/>
+    </g>
+  </g>
+  <!-- LGR dehumidifier -->
+  <g>
+    <rect x="420" y="222" width="88" height="92" rx="8" fill="#255264"/>
+    <rect x="432" y="236" width="64" height="26" rx="4" fill="#0c2230"/>
+    <text x="440" y="254" font-family="IBM Plex Mono, monospace" font-size="13" fill="#4dff88">38%RH</text>
+    <circle cx="446" cy="286" r="9" stroke="#0c2230" stroke-width="3"/>
+    <circle cx="482" cy="286" r="9" stroke="#0c2230" stroke-width="3"/>
+    <rect x="436" y="304" width="14" height="10" rx="3" fill="#0c2230"/>
+    <rect x="478" y="304" width="14" height="10" rx="3" fill="#0c2230"/>
+    <!-- drain hose -->
+    <path d="M508 300 q36 6 56 -8" stroke="#3ec6d8" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <!-- technician with moisture meter at wall -->
+  <g>
+    <path d="M556 216 l-4 46 h12 l3 -38 M572 216 l4 46 h-12" fill="#0c2230" transform="translate(-260,54)"/>
+    <rect x="288" y="196" width="34" height="62" rx="10" fill="#ff5238"/>
+    <rect x="288" y="210" width="34" height="7" fill="#ffd23e"/>
+    <circle cx="305" cy="180" r="13" fill="#e8b48c"/>
+    <path d="M291 177 a14 14 0 0 1 28 0 l0 3 l-28 0 Z" fill="#ffd23e"/>
+    <path d="M292 208 q-20 4 -26 20" stroke="#ff5238" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <!-- meter against wall -->
+    <rect x="252" y="222" width="16" height="24" rx="3" fill="#eef4f4"/>
+    <rect x="255" y="226" width="10" height="8" rx="1" fill="#4dff88"/>
+  </g>
+  <!-- moisture map marks on wall -->
+  <g stroke="#3ec6d8" stroke-width="2" opacity="0.55" fill="none">
+    <ellipse cx="140" cy="150" rx="52" ry="30"/>
+    <ellipse cx="140" cy="150" rx="30" ry="16"/>
+  </g>
+  <text x="102" y="108" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#3ec6d8" opacity="0.9">DAY 2 &middot; DRYING</text>
+  <!-- window: dawn coming -->
+  <rect x="440" y="70" width="120" height="96" rx="4" fill="#0d2434" stroke="#1d4456" stroke-width="4"/>
+  <line x1="500" y1="70" x2="500" y2="166" stroke="#1d4456" stroke-width="4"/>
+  <circle cx="472" cy="140" r="16" fill="#ff8a5c" opacity="0.6"/>
+</svg>
+
+<style>
+  .dry-scene {
+    width: 100%; height: auto; display: block;
+    border-radius: 20px;
+    border: 1px solid rgba(14, 36, 51, 0.12);
+    box-shadow: 0 24px 64px rgba(14, 36, 51, 0.18);
+  }
+</style>

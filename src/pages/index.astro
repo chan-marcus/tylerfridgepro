@@ -1,0 +1,417 @@
+---
+import Base from '../layouts/Base.astro';
+import ServiceIcon from '../components/ServiceIcon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE } from '../config/site';
+import { SERVICES } from '../data/services';
+import { CITIES } from '../data/cities';
+
+// split the vanity number so the word ("COLD") can be accented
+const vanityParts = SITE.phoneVanity.split('-');
+const vanityWord = vanityParts.pop();
+const vanityNum = vanityParts.join('-');
+
+const faq = [
+  { q: 'How fast can a tech get to me?', a: 'Dispatch answers 24/7 and techs are local to Tyler and the surrounding towns. Emergency response across Whitehouse, Bullard, Lindale, and Flint is typically a matter of hours, day or night.' },
+  { q: 'What should I do while I wait?', a: 'Keep the cooler or freezer doors closed to hold whatever cold air is left, note the current temperature, and move critical product to a working box if you have one. The dispatcher can walk you through it on the phone.' },
+  { q: 'Can you save the product inside?', a: 'Fast response is the biggest factor in whether inventory survives. If the box is still cold, a tech can advise on holding temperatures over the phone and prioritize getting you back in range before product is lost.' },
+  { q: 'Do you charge to come out?', a: 'Calling costs nothing and the dispatcher will give you straight answers about the situation. After-hours work carries its rate, but a fast fix usually costs far less than the spoiled inventory and downtime of waiting.' },
+  { q: 'Is it worth calling after hours instead of waiting for morning?', a: 'Yes. Every hour a cooler or freezer sits above temperature is spoiling inventory and risking a health-code violation. The clock is running whether or not you are open.' }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a }
+  }))
+};
+---
+<Base
+  title={`${SITE.serviceType} ${SITE.serviceRegion} | 24/7 | ${SITE.brand}`}
+  description={`Emergency commercial refrigeration repair across ${SITE.serviceRegion} and East Texas: walk-in coolers, freezers, ice machines, and reach-ins. Techs answer 24/7. Call ${SITE.phoneVanity}.`}
+  schema={[faqSchema]}
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-badge"><span class="open-dot" aria-hidden="true"></span> 24/7 Emergency Refrigeration Dispatch &middot; {SITE.serviceRegion}</span>
+        <h1>Walk-in warming up?<br /><span class="accent">We&rsquo;re already moving.</span></h1>
+        <p class="hero-sub">Compressors quit at midnight and freezers frost over on holiday weekends. One call reaches a live dispatcher who sends a licensed refrigeration tech &mdash; any hour, anywhere in East Texas.</p>
+        <ul class="hero-proof">
+          <li>24/7 live dispatch</li>
+          <li>Locally owned in Tyler</li>
+          <li>Coolers, freezers &amp; ice machines</li>
+        </ul>
+      </div>
+      <div class="hero-panel">
+        <span class="pt tl"></span><span class="pt tr"></span><span class="pt bl"></span><span class="pt br"></span>
+        <div class="panel-label">Call the cold line &middot; live 24/7</div>
+        <div class="panel-phone">{vanityNum}-<b>{vanityWord}</b></div>
+        <a class="btn-call panel-cta" href={`tel:${SITE.phoneTel}`}>Call {SITE.phoneVanity}</a>
+        <div class="panel-open"><span class="open-dot" aria-hidden="true"></span> Open now &middot; techs answering</div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="spec-strip">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+          <div><div class="sn">24/7</div><div class="sl">Live dispatch</div></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><div class="sn">Local</div><div class="sl">Tyler + East Texas</div></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4 7l16 10M20 7 4 17"/></svg>
+          <div><div class="sn">All units</div><div class="sl">Coolers &middot; freezers &middot; ice</div></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .55 3.4 1 1 0 0 1-.25 1z"/></svg>
+          <div><div class="sn">One call</div><div class="sl">Tech on the way</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-deep">
+    <div class="wrap">
+      <span class="eyebrow">Every kind of refrigeration problem</span>
+      <h2>Refrigeration services</h2>
+      <p class="section-sub">Each service has its own page covering what the tech does, what tends to cause the failure, and how fast you can be back in temperature.</p>
+      <div class="card-grid">
+        {SERVICES.map((s) => (
+          <a class="card" href={`/services/${s.slug}/`}>
+            <ServiceIcon icon={s.icon} />
+            <h3>{s.name}</h3>
+            <p>{s.short}</p>
+            <span class="card-cta">Details &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+
+  <section>
+    <div class="wrap how-grid">
+      <div>
+        <span class="eyebrow">What happens when you call</span>
+        <h2>From warm to cold</h2>
+        <ol class="steps">
+          <li>
+            <h3>You call, a person answers</h3>
+            <p>No voicemail, no callback queue. Describe what is happening and the dispatcher gets a tech assigned while you are still on the phone.</p>
+          </li>
+          <li>
+            <h3>A local tech rolls</h3>
+            <p>Licensed, insured refrigeration techs local to East Texas, carrying the gauges and common parts to diagnose on the first trip.</p>
+          </li>
+          <li>
+            <h3>Diagnosed and repaired</h3>
+            <p>Accurate temperatures and pressures, the real fault found instead of a quick recharge, and the repair done before your product takes the hit.</p>
+          </li>
+          <li>
+            <h3>Back in temperature, verified</h3>
+            <p>The box is confirmed holding its target temperature before the tech leaves, so your inventory and your next inspection are both safe.</p>
+          </li>
+        </ol>
+      </div>
+      <aside class="wait-card">
+        <span class="wait-label"><span class="open-dot" aria-hidden="true"></span> While you wait</span>
+        <ul>
+          <li>Keep cooler &amp; freezer doors shut</li>
+          <li>Note the current temperature</li>
+          <li>Move critical product to a working box</li>
+          <li>Have the unit make &amp; model ready</li>
+        </ul>
+        <a class="btn-call" href={`tel:${SITE.phoneTel}`}>Call {SITE.phoneVanity}</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-deep">
+    <div class="wrap">
+      <span class="eyebrow">Local techs, local knowledge</span>
+      <h2>Serving {SITE.serviceRegion}</h2>
+      <p class="section-sub">Brutal summer heat loads, hard-water scale on ice machines, and high-volume kitchens that run their coolers around the clock. Every town here has its own page.</p>
+      <div class="card-grid areas-grid">
+        {CITIES.map((c) => (
+          <a class="card" href={`/areas/${c.slug}/`}>
+            <h3>{c.name}</h3>
+            <p class="mono county">{c.county.toUpperCase()}</p>
+            <p>{c.short}</p>
+            <span class="card-cta">Local page &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap testi-wrap">
+      <span class="eyebrow">From the call log</span>
+      <h2>Neighbors we picked up for</h2>
+      <div class="testi-grid">
+        <blockquote>
+          <p>&ldquo;Walk-in cooler quit at 11pm with a full weekend of prep inside. Called, got a human, tech had it holding temp again before 1am. Saved the whole box.&rdquo;</p>
+          <cite class="mono">D.R. &middot; WHITEHOUSE</cite>
+        </blockquote>
+        <blockquote>
+          <p>&ldquo;Ice machine died Friday night in the middle of a rush. Tech got it producing again the same night and cleared out the scale that caused it. Never lost service.&rdquo;</p>
+          <cite class="mono">M.G. &middot; LINDALE</cite>
+        </blockquote>
+        <blockquote>
+          <p>&ldquo;Reach-in freezer kept frosting over and warming up. They found the defrost fault on the first visit instead of just topping off refrigerant. Fixed for good.&rdquo;</p>
+          <cite class="mono">K.P. &middot; BULLARD</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-deep">
+    <div class="wrap trust-wrap">
+      <span class="eyebrow">Why call here first</span>
+      <h2>The 2am math</h2>
+      <div class="trust-grid">
+        <div>
+          <h3>Franchise 800 number</h3>
+          <p>Call center out of state, tech assigned from wherever has capacity, response measured in tomorrow. Your product keeps warming the whole time.</p>
+        </div>
+        <div>
+          <h3>Waiting until morning</h3>
+          <p>Eight more hours above safe temperature. Spoiled inventory and a failed health inspection do not care that it was late. A small fix becomes a total loss overnight.</p>
+        </div>
+        <div class="trust-us">
+          <h3>{SITE.brand}</h3>
+          <p>Local dispatch, local techs, answer in seconds at any hour. On-site tonight, the box verified back in temperature before we leave.</p>
+          <a class="btn-call" href={`tel:${SITE.phone}`}>Call {SITE.phoneVanity}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap faq-wrap">
+      <span class="eyebrow">Straight answers</span>
+      <h2>Questions people ask at 2am</h2>
+      <div class="faq-list">
+        {faq.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand heading="Do not wait on a warm box." sub="Every hour above temperature adds to the loss. The call is free and a dispatcher answers right now." />
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    background:
+      radial-gradient(120% 90% at 82% -8%, rgba(47, 189, 218, 0.16), transparent 55%),
+      radial-gradient(90% 70% at 4% 115%, rgba(47, 189, 218, 0.07), transparent 60%),
+      var(--navy);
+    padding: 3.4rem 0 0;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(120, 160, 185, 0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: linear-gradient(180deg, #000, transparent 72%);
+    mask-image: linear-gradient(180deg, #000, transparent 72%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.6rem; align-items: center;
+    padding: 1rem 0 2.6rem;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-line);
+    color: #CFE0E8;
+    font-family: var(--font-body); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 0.4rem 0.9rem; border-radius: 30px; margin-bottom: 1.2rem;
+  }
+  .hero h1 { color: #F5F9FB; margin-bottom: 1rem; }
+  .accent {
+    background: linear-gradient(180deg, #8BE7F5, #3BC3E0);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero-sub { color: #A6BCCA; font-size: 1.1rem; max-width: 46ch; line-height: 1.65; margin-bottom: 1.6rem; }
+  .hero-proof {
+    display: flex; gap: 1.3rem; flex-wrap: wrap; list-style: none;
+    font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; color: #8BA2B2;
+  }
+  .hero-proof li { display: flex; align-items: center; gap: 0.5rem; }
+  .hero-proof li::before {
+    content: '';
+    width: 16px; height: 16px; flex-shrink: 0; border-radius: 50%;
+    background: rgba(79, 209, 233, 0.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234FD1E9' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 9px no-repeat;
+  }
+  /* phone focal panel */
+  .hero-panel {
+    position: relative;
+    border: 1px solid var(--dark-line);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+    border-radius: 18px;
+    padding: 1.6rem 1.6rem 1.7rem;
+    box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  .hero-panel .pt { position: absolute; width: 11px; height: 11px; border: 2px solid var(--primary-bright); opacity: 0.6; }
+  .hero-panel .tl { top: 10px; left: 10px; border-right: 0; border-bottom: 0; }
+  .hero-panel .tr { top: 10px; right: 10px; border-left: 0; border-bottom: 0; }
+  .hero-panel .bl { bottom: 10px; left: 10px; border-right: 0; border-top: 0; }
+  .hero-panel .br { bottom: 10px; right: 10px; border-left: 0; border-top: 0; }
+  .panel-label {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: #7C93A6; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.7rem;
+  }
+  .panel-phone {
+    color: #fff; font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(2.1rem, 5vw, 3.1rem); letter-spacing: 0.01em; line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .panel-phone b {
+    background: linear-gradient(180deg, #8BE7F5, #39C1DE);
+    -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700;
+  }
+  .panel-cta { width: 100%; justify-content: center; margin-top: 1rem; font-size: 1.05rem; padding: 0.95rem; }
+  .panel-open {
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.85rem;
+    color: #8BA2B2; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  /* spec strip */
+  .spec-strip {
+    position: relative;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--dark-line); border-radius: 14px; overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 3.4rem;
+  }
+  .spec-strip > div { display: flex; align-items: center; gap: 0.7rem; padding: 1.1rem 1.2rem; border-left: 1px solid var(--dark-line); }
+  .spec-strip > div:first-child { border-left: 0; }
+  .spec-strip svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--primary-bright); }
+  .spec-strip .sn { color: #EAF3F6; font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.1; }
+  .spec-strip .sl { color: #7C93A6; font-size: 0.72rem; margin-top: 1px; }
+
+  .section-sub { max-width: 60ch; margin-top: 1rem; font-size: 1.05rem; }
+
+  .how-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3.5rem; align-items: start; }
+  .wait-card {
+    position: sticky; top: 6rem;
+    background: #ffffff; border: 1px solid var(--line); border-radius: 16px;
+    padding: 1.6rem 1.6rem 1.7rem; box-shadow: var(--shadow-lg);
+  }
+  .wait-card .wait-label {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--primary-deep);
+  }
+  .wait-card ul { list-style: none; margin: 1.1rem 0 1.4rem; }
+  .wait-card li {
+    position: relative; padding: 0.55rem 0 0.55rem 1.7rem;
+    font-size: 0.94rem; color: var(--silt); border-top: 1px solid var(--line);
+  }
+  .wait-card li:first-child { border-top: 0; }
+  .wait-card li::before {
+    content: ''; position: absolute; left: 0; top: 0.72rem;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B7E99' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 8px no-repeat;
+  }
+  .wait-card .btn-call { width: 100%; justify-content: center; }
+  .steps { list-style: none; counter-reset: step; margin-top: 2.4rem; }
+  .steps li {
+    counter-increment: step; position: relative;
+    padding: 0 0 1.9rem 3.6rem;
+    border-left: 1px solid var(--line); margin-left: 1.25rem;
+  }
+  .steps li:last-child { padding-bottom: 0; border-left-color: transparent; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: -1.3rem; top: -0.2rem;
+    width: 2.5rem; height: 2.5rem; border-radius: 13px;
+    background: var(--tint); border: 1px solid rgba(13, 148, 168, 0.25);
+    color: var(--primary-deep); font-family: var(--font-display); font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .steps h3 { font-size: 1.05rem; }
+  .steps p { margin-top: 0.35rem; font-size: 0.94rem; }
+
+  .county { font-size: 0.68rem; margin-top: -0.35rem; color: #8aa0ab; letter-spacing: 0.08em; }
+
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2.8rem; }
+  .testi-grid blockquote {
+    background: #ffffff; border: 1px solid var(--line); border-radius: 16px;
+    padding: 1.8rem 1.6rem; display: flex; flex-direction: column; gap: 1.1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .testi-grid blockquote::before {
+    content: 'C';
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 2.6rem; line-height: 0.5;
+    color: var(--primary); opacity: 0.55;
+    margin-bottom: -0.4rem;
+  }
+  .testi-grid p { font-size: 0.94rem; line-height: 1.65; }
+  .testi-grid cite { font-style: normal; font-size: 0.72rem; }
+
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2.8rem; }
+  .trust-grid > div {
+    background: #ffffff;
+    border: 1px solid var(--line); border-radius: 16px; padding: 1.8rem 1.6rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .trust-grid p { margin-top: 0.6rem; font-size: 0.94rem; }
+  .trust-us {
+    background: linear-gradient(160deg, var(--tint), #ffffff 70%) !important;
+    border-color: rgba(13, 148, 168, 0.35) !important;
+  }
+  .trust-us .btn-call { margin-top: 1.3rem; font-size: 0.95rem; padding: 0.8rem 1.5rem; }
+
+  .faq-list { margin-top: 2.4rem; max-width: 780px; }
+  details {
+    border: 1px solid var(--line); border-radius: 14px;
+    padding: 1.1rem 1.35rem; margin-bottom: 0.75rem; background: #ffffff;
+    box-shadow: var(--shadow-sm);
+  }
+  summary {
+    cursor: pointer; font-family: var(--font-display); font-weight: 600;
+    color: var(--paper); list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+'; color: var(--primary);
+    font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; line-height: 1;
+  }
+  details[open] summary::after { content: '2'; }
+  details p { margin-top: 0.8rem; font-size: 0.95rem; }
+
+  @media (max-width: 900px) {
+    .hero-grid, .how-grid { grid-template-columns: 1fr; gap: 2.4rem; }
+    .spec-strip { grid-template-columns: 1fr 1fr; }
+    .spec-strip > div:nth-child(3) { border-left: 0; }
+    .wait-card { position: static; }
+    .testi-grid, .trust-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 460px) {
+    .spec-strip { grid-template-columns: 1fr; }
+    .spec-strip > div { border-left: 0; border-top: 1px solid var(--dark-line); }
+    .spec-strip > div:first-child { border-top: 0; }
+  }
+</style>

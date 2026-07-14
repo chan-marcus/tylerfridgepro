@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import ServiceIcon from '../../components/ServiceIcon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { SITE } from '../../config/site';
+import { SERVICES } from '../../data/services';
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: SITE.domain + '/services/' }
+  ]
+};
+---
+<Base
+  title={`Commercial Refrigeration Services | ${SITE.brand}`}
+  description={`Every commercial refrigeration service available 24/7 across ${SITE.serviceRegion} and East Texas: walk-in coolers, freezers, ice machines, reach-ins, maintenance, installation, and emergency repair.`}
+  schema={[breadcrumb]}
+>
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">24/7 across East Texas</span>
+      <h1>Refrigeration services</h1>
+      <p class="lede">Refrigeration fails in a lot of ways. Pick the one you are dealing with; each page covers what the tech does, what tends to cause it, and how fast you can be back in temperature.</p>
+      <div class="card-grid">
+        {SERVICES.map((s) => (
+          <a class="card" href={`/services/${s.slug}/`}>
+            <ServiceIcon icon={s.icon} />
+            <h3>{s.name}</h3>
+            <p>{s.short}</p>
+            <span class="card-cta">DETAILS &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+
+<style>
+  .lede { max-width: 62ch; margin-top: 1rem; font-size: 1.1rem; }
+</style>

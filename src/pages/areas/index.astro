@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { SITE } from '../../config/site';
+import { CITIES } from '../../data/cities';
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Areas', item: SITE.domain + '/areas/' }
+  ]
+};
+---
+<Base
+  title={`Service Areas | ${SITE.serviceRegion} & East Texas | ${SITE.brand}`}
+  description={`24/7 commercial refrigeration dispatch across ${SITE.serviceRegion} and East Texas: ${CITIES.map((c) => c.name).join(', ')}.`}
+  schema={[breadcrumb]}
+>
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Tyler &amp; East Texas</span>
+      <h1>Where techs respond</h1>
+      <p class="lede">Local techs across East Texas, not routed in from Dallas. Each city page covers the refrigeration realities there, from brutal summer heat loads to hard-water scale on ice machines to travel-stop coolers that never stop running.</p>
+      <div class="card-grid">
+        {CITIES.map((c) => (
+          <a class="card" href={`/areas/${c.slug}/`}>
+            <h3>{c.name}</h3>
+            <p class="mono county">{c.county.toUpperCase()}</p>
+            <p>{c.short}</p>
+            <span class="card-cta">LOCAL PAGE &rarr;</span>
+          </a>
+        ))}
+      </div>
+      <p class="edge-note">On the edge of the map? Techs regularly cover Noonday, New Chapel Hill, Overton, Troup, Hideaway, Gresham, Swan, and the unincorporated pockets in between. Call and dispatch will tell you straight whether a tech can reach you.</p>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+
+<style>
+  .lede { max-width: 62ch; margin-top: 1rem; font-size: 1.1rem; }
+  .county { font-size: 0.65rem; margin-top: -0.35rem; }
+  .edge-note { margin-top: 2.2rem; max-width: 68ch; font-size: 0.95rem; }
+</style>

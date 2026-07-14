@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/Base.astro';
+import ServiceIcon from '../../components/ServiceIcon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { SITE } from '../../config/site';
+import { CITIES } from '../../data/cities';
+import { SERVICES } from '../../data/services';
+
+export function getStaticPaths() {
+  return CITIES.map((c) => ({ params: { slug: c.slug }, props: { city: c } }));
+}
+
+const { city } = Astro.props;
+const topServices = SERVICES.slice(0, 6);
+const otherCities = CITIES.filter((c) => c.slug !== city.slug);
+
+const areaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: `${SITE.serviceType} in ${city.name}, ${SITE.state}`,
+  serviceType: SITE.serviceType,
+  provider: { '@id': SITE.domain + '/#business' },
+  areaServed: { '@type': 'City', name: city.name, containedInPlace: { '@type': 'AdministrativeArea', name: city.county } }
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Areas', item: SITE.domain + '/areas/' },
+    { '@type': 'ListItem', position: 3, name: city.name, item: SITE.domain + '/areas/' + city.slug + '/' }
+  ]
+};
+---
+<Base
+  title={`${SITE.serviceType} ${city.name}, ${SITE.state} | 24/7 | ${SITE.brand}`}
+  description={`Emergency commercial refrigeration repair in ${city.name}. ${city.short} Open now, call ${SITE.phoneVanity}.`}
+  schema={[areaSchema, breadcrumb]}
+>
+  <section class="page-hero area-hero">
+    <div class="wrap">
+      <nav class="crumbs mono" aria-label="Breadcrumb">
+        <a href="/">HOME</a> / <a href="/areas/">AREAS</a> / <span>{city.name.toUpperCase()}</span>
+      </nav>
+      <span class="badge"><span class="open-dot" aria-hidden="true"></span> {city.county} &middot; 24/7 Dispatch</span>
+      <h1>{city.h1}</h1>
+      {city.intro.map((p) => <p class="body-p">{p}</p>)}
+      <div class="area-actions">
+        <a class="btn-call" href={`tel:${SITE.phoneTel}`}>Call {SITE.phoneVanity}</a>
+        <a class="btn-ghost" href="/services/">All services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-deep">
+    <div class="wrap">
+      <h2>What {city.name} businesses are up against</h2>
+      <div class="risk-grid">
+        {city.localRisks.map((r) => (
+          <div class="risk">
+            <h3>{r.title}</h3>
+            <p>{r.body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="hoods mono">TECHS RESPOND ACROSS: {city.neighborhoods.join(' \u00b7 ').toUpperCase()}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Available in {city.name}</span>
+      <h2>Services on call tonight</h2>
+      <div class="card-grid">
+        {topServices.map((s) => (
+          <a class="card" href={`/services/${s.slug}/${city.slug}/`}>
+            <ServiceIcon icon={s.icon} />
+            <h3>{s.name}</h3>
+            <p>{s.short}</p>
+            <span class="card-cta">DETAILS &rarr;</span>
+          </a>
+        ))}
+      </div>
+      <p class="all-link"><a href="/services/">See all services &rarr;</a></p>
+    </div>
+  </section>
+
+  <CtaBand heading={`Refrigeration down in ${city.name}?`} sub={`Techs local to ${city.county} answer around the clock. Calling costs nothing.`} />
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Nearby</span>
+      <h2>Also serving</h2>
+      <div class="nearby">
+        {otherCities.map((c) => <a href={`/areas/${c.slug}/`}>{c.name}</a>)}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .crumbs { font-size: 0.68rem; margin-bottom: 1.6rem; }
+  .crumbs a { text-decoration: none; }
+  .body-p { max-width: 68ch; margin-top: 1.1rem; }
+  .area-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-top: 1.8rem; }
+
+  .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+  .risk { border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; background: var(--panel); }
+  .risk p { margin-top: 0.4rem; font-size: 0.95rem; }
+  .hoods { margin-top: 2rem; font-size: 0.68rem; line-height: 2; color: var(--silt); }
+
+  .all-link { margin-top: 1.6rem; }
+  .nearby { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+  .nearby a {
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 0.45rem 1.1rem; text-decoration: none; color: var(--paper);
+    font-weight: 600; font-size: 0.92rem;
+  }
+  .nearby a:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  @media (max-width: 760px) {
+    .risk-grid { grid-template-columns: 1fr; }
+  }
+</style>

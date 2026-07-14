@@ -1,0 +1,95 @@
+---
+interface Props { icon: string }
+const { icon } = Astro.props;
+---
+{icon === 'extract' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M6 36 q6 -5 12 0 t12 0 t12 0" stroke="var(--cyan)" stroke-width="2.5"/>
+    <path d="M6 42 q6 -5 12 0 t12 0 t12 0" stroke="var(--cyan)" stroke-width="2.5" opacity="0.4"/>
+    <rect x="18" y="6" width="12" height="16" rx="2" stroke="var(--paper)" stroke-width="2.5"/>
+    <path d="M24 22 v8 M20 30 h8" stroke="var(--paper)" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+)}
+{icon === 'flood' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M8 22 L24 8 L40 22" stroke="var(--paper)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 22 v8 M36 22 v8" stroke="var(--paper)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M4 34 q5 -4 10 0 t10 0 t10 0 t10 0" stroke="var(--cyan)" stroke-width="2.5"/>
+    <path d="M4 41 q5 -4 10 0 t10 0 t10 0 t10 0" stroke="var(--cyan)" stroke-width="2.5" opacity="0.4"/>
+  </svg>
+)}
+{icon === 'sewage' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <circle cx="24" cy="24" r="17" stroke="var(--paper)" stroke-width="2.5"/>
+    <path d="M24 12 v9 M24 21 a6 6 0 1 0 6 6" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M14 40 h20" stroke="var(--flare)" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+)}
+{icon === 'pipe' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M6 16 h16 a4 4 0 0 1 4 4 v20" stroke="var(--paper)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M6 10 v12 M32 34 h-12" stroke="var(--paper)" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+    <path d="M30 14 l4 -4 M33 20 l6 -2 M27 9 l1 -6" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="26" cy="44" r="2.5" fill="var(--cyan)"/>
+  </svg>
+)}
+{icon === 'drying' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <rect x="8" y="14" width="22" height="26" rx="3" stroke="var(--paper)" stroke-width="2.5"/>
+    <circle cx="19" cy="27" r="6.5" stroke="var(--paper)" stroke-width="2.5"/>
+    <path d="M34 18 q6 2 0 6 M38 26 q6 2 0 6 M34 34 q6 2 0 6" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+)}
+{icon === 'mold' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <rect x="7" y="7" width="34" height="34" rx="3" stroke="var(--paper)" stroke-width="2.5"/>
+    <circle cx="17" cy="30" r="4" fill="var(--cyan)" opacity="0.8"/>
+    <circle cx="26" cy="34" r="2.5" fill="var(--cyan)" opacity="0.6"/>
+    <circle cx="14" cy="21" r="2" fill="var(--cyan)" opacity="0.5"/>
+    <path d="M7 15 h34" stroke="var(--paper)" stroke-width="2.5" opacity="0.4"/>
+  </svg>
+)}
+{icon === 'storm' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M14 22 a9 9 0 0 1 17 -4 a7 7 0 0 1 3 13 h-18 a7 7 0 0 1 -2 -9 Z" stroke="var(--paper)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M22 34 l-4 8 M30 34 l-4 8" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M25 24 l-5 8 h6 l-4 8" stroke="var(--flare)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </svg>
+)}
+{icon === 'crawl' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M6 20 L24 6 L42 20" stroke="var(--paper)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 20 h28 v8 h-28 Z" stroke="var(--paper)" stroke-width="2.5"/>
+    <path d="M10 34 q4.5 -4 9 0 t9 0 t10 0" stroke="var(--cyan)" stroke-width="2.5"/>
+    <path d="M14 28 v3 M24 28 v3 M34 28 v3" stroke="var(--paper)" stroke-width="2.5" opacity="0.4"/>
+  </svg>
+)}
+{icon === 'appliance' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <rect x="14" y="6" width="20" height="30" rx="4" stroke="var(--paper)" stroke-width="2.5"/>
+    <path d="M24 12 v4" stroke="var(--paper)" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="24" cy="26" r="4" stroke="var(--paper)" stroke-width="2.5"/>
+    <path d="M10 42 q4.5 -4 9 0 t9 0 t10 0" stroke="var(--cyan)" stroke-width="2.5"/>
+  </svg>
+)}
+{icon === 'fire' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M24 5 c2 7 10 10 10 20 a10 10 0 0 1 -20 0 c0 -6 4 -8 5 -13 2 2 3 4 3 7 2 -3 2 -9 2 -14 Z" stroke="var(--flare)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M8 42 q4.5 -4 9 0 t9 0 t10 0" stroke="var(--cyan)" stroke-width="2.5"/>
+  </svg>
+)}
+{icon === 'commercial' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M8 40 V12 h18 v28 M26 20 h14 v20" stroke="var(--paper)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M13 18 h3 M13 24 h3 M13 30 h3 M19 18 h3 M19 24 h3 M19 30 h3 M31 26 h4 M31 32 h4" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M4 40 h40" stroke="var(--paper)" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+)}
+{icon === 'claim' && (
+  <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <path d="M12 6 h18 l8 8 v28 h-26 Z" stroke="var(--paper)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M30 6 v8 h8" stroke="var(--paper)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M18 24 h12 M18 30 h12" stroke="var(--silt)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M17 37 l3 3 l6 -6" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+)}

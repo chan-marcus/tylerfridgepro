@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SITE } from '../config/site';
+---
+<Base
+  title={`About | ${SITE.brand}`}
+  description={`${SITE.brand} is a local 24/7 commercial refrigeration dispatch service connecting Tyler-area businesses with licensed refrigeration technicians across East Texas.`}
+>
+  <section>
+    <div class="wrap about-wrap">
+      <span class="eyebrow">Who picks up when you call</span>
+      <h1>Built for the night your cooler quits</h1>
+      <p>Refrigeration has a cruel schedule. Compressors quit at midnight, walk-ins warm up over long weekends, and ice machines die in the middle of a Friday rush. Meanwhile half the repair numbers you find at 2am ring to an out-of-state call center or a voicemail box that promises a callback.</p>
+      <p>{SITE.brand} exists to shortcut that. One local number, answered by a live dispatcher around the clock, connected to a network of licensed, insured refrigeration technicians across Tyler and East Texas. You describe the problem, the dispatcher tells you how to protect your product, and a tech from your side of town rolls with gauges and common parts on the truck.</p>
+      <h2>How the network works</h2>
+      <p>{SITE.legalLine} Every tech in the network carries proper licensing and insurance, works to commercial refrigeration and food-safety standards, and documents the repair. The dispatch model means someone answers even when an individual shop is already out on a call, which matters most during a summer heat wave when every kitchen in town is calling at once.</p>
+      <h2>Why local matters here</h2>
+      <p>East Texas is hard on refrigeration in ways outside techs misread. Brutal Piney Woods summers that load condensers past their limit. Hard water that scales up every ice machine in the county. High-volume kitchens on South Broadway and travel-stop coolers out on I-20 that never stop running. Techs who work these towns daily know where to look first, and that shows up in how fast you are back in temperature.</p>
+      <div class="about-cta">
+        <a class="btn-call" href={`tel:${SITE.phone}`}>Call {SITE.phoneVanity}</a>
+        <p class="mono"><span class="open-dot" aria-hidden="true"></span> OPEN NOW &middot; 24/7/365</p>
+      </div>
+    </div>
+  </section>
+  <CtaBand />
+</Base>
+
+<style>
+  .about-wrap { max-width: 46em; }
+  .about-wrap p { margin-top: 1.1rem; }
+  .about-wrap h2 { margin-top: 2.4rem; }
+  .about-cta { margin-top: 2.4rem; display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+  .about-cta p { display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; margin: 0; }
+</style>

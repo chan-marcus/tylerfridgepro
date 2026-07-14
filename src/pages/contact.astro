@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config/site';
+import { CITIES } from '../data/cities';
+---
+<Base
+  title={`Contact | 24/7 Dispatch | ${SITE.brand}`}
+  description={`Reach ${SITE.brand} dispatch 24/7 for commercial refrigeration emergencies across ${SITE.serviceRegion} and East Texas. Call ${SITE.phoneVanity}, open now.`}
+>
+  <section>
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Fastest path</span>
+        <h1>If it is warming up, call.</h1>
+        <p>An emergency is not an email. Dispatch answers the phone 24 hours a day, every day of the year, and a call gets a tech moving in minutes. Everything else on this page is for the non-urgent stuff.</p>
+        <div class="big-call">
+          <a class="btn-call" href={`tel:${SITE.phone}`}>Call {SITE.phoneVanity}</a>
+          <p class="mono"><span class="open-dot" aria-hidden="true"></span> OPEN NOW &middot; LIVE DISPATCHER</p>
+        </div>
+        <h2>While you wait for the tech</h2>
+        <ul class="prep">
+          <li><strong>Keep the doors closed</strong> on the cooler or freezer to hold whatever cold air is left.</li>
+          <li><strong>Note the temperature</strong> so the tech knows how far the box has drifted.</li>
+          <li><strong>Move critical product</strong> to a working cooler or freezer if you have one.</li>
+          <li><strong>Do not keep resetting a breaker</strong> that trips; a repeatedly tripping unit needs a tech, not another reset.</li>
+          <li><strong>Find the make and model</strong> if you can; it helps the tech bring the right part.</li>
+        </ul>
+      </div>
+      <div class="side">
+        <div class="side-card">
+          <h3>Non-urgent questions</h3>
+          <p>Estimates, maintenance scheduling, or having a unit that still runs but is not keeping up looked at before it fails:</p>
+          <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+        </div>
+        <div class="side-card">
+          <h3>Service region</h3>
+          <p>{SITE.serviceRegion} and the surrounding East Texas towns: {CITIES.map((c) => c.name).join(', ')}, and the communities in between.</p>
+          <p><a href="/areas/">See all areas &rarr;</a></p>
+        </div>
+        <div class="side-card map-card">
+          <h3>Based in Tyler, TX</h3>
+          <iframe
+            title="Map of Tyler, TX and the surrounding service area"
+            src="https://maps.google.com/maps?q=Tyler,+TX&t=&z=10&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <p><a href="https://www.google.com/maps/place/Tyler,+TX" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></p>
+        </div>
+        <div class="side-card">
+          <h3>For refrigeration techs</h3>
+          <p>Licensed and insured refrigeration tech in the Tyler area interested in taking dispatched jobs? Email with your certifications and coverage area.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; }
+  .contact-grid > div > p { margin-top: 1rem; max-width: 54ch; }
+  .big-call { margin: 2rem 0 2.5rem; display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+  .big-call p { display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; margin: 0; }
+  .prep { list-style: none; margin-top: 1.4rem; }
+  .prep li { padding: 0.55rem 0 0.55rem 1.6rem; position: relative; color: var(--silt); }
+  .prep li::before { content: '\2713'; position: absolute; left: 0; color: var(--cyan); font-weight: 700; }
+  .side { display: flex; flex-direction: column; gap: 1rem; }
+  .side-card { border: 1px solid var(--line); border-radius: 10px; padding: 1.5rem; background: var(--panel); }
+  .side-card p { margin-top: 0.5rem; font-size: 0.95rem; }
+  .map-card iframe {
+    width: 100%; height: 220px; border: 0; display: block;
+    margin-top: 0.8rem; border-radius: 10px;
+    filter: grayscale(0.2);
+  }
+  @media (max-width: 800px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
