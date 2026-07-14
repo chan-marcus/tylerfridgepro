@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="A commercial ice machine beside two ice cubes: one clear, one cloudy from mineral scale">
+  <rect width="800" height="280" rx="16" fill="#EAF6F9"/>
+  <g fill="none" stroke="#0B1B26" stroke-width="3" stroke-linejoin="round">
+    <rect x="80" y="58" width="210" height="92" rx="8"/>
+    <rect x="80" y="150" width="210" height="72" rx="8"/>
+    <line x1="110" y1="88" x2="260" y2="88"/>
+    <line x1="110" y1="104" x2="260" y2="104"/>
+    <line x1="110" y1="120" x2="260" y2="120"/>
+  </g>
+  <g transform="translate(430,96)">
+    <rect width="94" height="94" rx="12" fill="#ffffff" stroke="#12A3C2" stroke-width="3"/>
+    <path d="M20 22 L38 22 M20 34 L32 34" stroke="#4FD1E9" stroke-width="3" stroke-linecap="round"/>
+    <text x="47" y="130" font-family="Verdana, sans-serif" font-size="13" letter-spacing="1.5" fill="#0B7E99" text-anchor="middle">CLEAR</text>
+  </g>
+  <g transform="translate(588,96)">
+    <rect width="94" height="94" rx="12" fill="#D8E8EE" stroke="#0B1B26" stroke-width="3"/>
+    <g fill="#7C93A6">
+      <circle cx="26" cy="30" r="3"/><circle cx="48" cy="22" r="2.6"/><circle cx="66" cy="36" r="3"/>
+      <circle cx="32" cy="52" r="2.6"/><circle cx="56" cy="60" r="3"/><circle cx="70" cy="64" r="2.6"/>
+      <circle cx="40" cy="74" r="2.6"/><circle cx="20" cy="66" r="2.4"/>
+    </g>
+    <text x="47" y="130" font-family="Verdana, sans-serif" font-size="13" letter-spacing="1.5" fill="#0B1B26" text-anchor="middle">CLOUDY (SCALE)</text>
+  </g>
+</svg>

@@ -4,11 +4,13 @@ description: "The walk-in is climbing above 41°F and there's product on the lin
 date: 2026-07-08
 ---
 
+![A walk-in cooler beside a temperature readout showing it has drifted above the safe range](/blog/walk-in-first-hour.svg)
+
 When a walk-in starts warming, the first hour decides whether you lose a shelf or a weekend's worth of inventory. Panic doesn't help; a short, calm checklist does. Here's the order East Texas kitchens should work through.
 
 ## Confirm it's actually warming
 
-Before anything, get a real number. Check the box thermometer, and if you don't trust it, put a probe thermometer between two packages near the middle of the walk-in. Anything creeping above **41°F** for refrigerated product is the danger zone. Note the temperature and the time — you'll want that timeline later, both for the tech and for your own records.
+Before anything, get a real number. Check the box thermometer, and if you don't trust it, put a probe thermometer between two packages near the middle of the walk-in. Anything creeping above **41°F** for refrigerated product is the danger zone. Note the temperature and the time; you'll want that timeline later, both for the tech and for your own records.
 
 ## Keep the doors shut
 
@@ -20,13 +22,13 @@ Dairy, raw proteins, and anything already near its limit should move first. If y
 
 ## Two things you can safely check yourself
 
-- **The condenser coil.** On most walk-ins the condensing unit sits on top of the box or just outside. If the coil is caked with grease and dust, it can't shed heat — and a filthy coil is one of the most common reasons a box drifts warm in the summer.
+- **The condenser coil.** On most walk-ins the condensing unit sits on top of the box or just outside. If the coil is caked with grease and dust, it can't shed heat. A filthy coil is one of the most common reasons a box drifts warm in the summer.
 - **The evaporator inside.** If the coil is a solid block of ice, you've likely got a defrost problem. Don't chip at it; just note it for the tech.
 
 ## What not to do
 
-Don't keep resetting a breaker that trips — a unit that trips repeatedly needs a tech, not another reset. Don't add a box fan and hope; it moves air, not heat. And never pour hot water on an iced-up coil.
+Don't keep resetting a breaker that trips; a unit that trips repeatedly needs a tech, not another reset. Don't add a box fan and hope; it moves air, not heat. And never pour hot water on an iced-up coil.
 
 ## When to call
 
-If the box is above 41°F and climbing, or you've spotted a leak, an iced coil, or a compressor that won't run, that's a call — not a wait-until-morning. The sooner a tech is on the way, the more product survives. Dispatch answers around the clock; have the unit's make and model handy if you can find it, along with the temperature timeline you started at the top of this list.
+If the box is above 41°F and climbing, or you've spotted a leak, an iced coil, or a compressor that won't run, that's a call, not a wait-until-morning. The sooner a tech is on the way, the more product survives. Dispatch answers around the clock; have the unit's make and model handy if you can find it, along with the temperature timeline you started at the top of this list.
