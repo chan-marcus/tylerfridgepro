@@ -100,6 +100,24 @@ const breadcrumb = {
 
   <section>
     <div class="wrap">
+      <span class="eyebrow">Is it time to call?</span>
+      <h2>Signs you need {service.name.toLowerCase()}</h2>
+      <p class="signs-lead">If any of these sound familiar in {city.name}, it is worth a call before a small fault becomes a full shutdown. A tech local to {city.county} can confirm the cause fast.</p>
+      <div class="sc-grid">
+        <div>
+          <h3 class="sc-head">Warning signs</h3>
+          <ul class="sc-list">{service.signs.map((s) => <li>{s}</li>)}</ul>
+        </div>
+        <div>
+          <h3 class="sc-head">Common causes</h3>
+          <ul class="sc-list">{service.causes.map((c) => <li>{c}</li>)}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-deep">
+    <div class="wrap">
       <span class="eyebrow">Local conditions</span>
       <h2>Why {city.name} businesses call</h2>
       <div class="risk-grid">
@@ -160,6 +178,24 @@ const breadcrumb = {
   .bullet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
   .bullet { border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; background: #fff; box-shadow: var(--shadow-sm); }
   .bullet p { margin-top: 0.4rem; font-size: 0.95rem; }
+
+  .signs-lead { max-width: 66ch; margin-top: 1rem; color: var(--silt); }
+  .sc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem 3rem; margin-top: 2rem; max-width: 960px; }
+  .sc-head {
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase; color: var(--primary-deep); margin-bottom: 0.3rem;
+  }
+  .sc-list { list-style: none; }
+  .sc-list li {
+    position: relative; padding: 0.7rem 0 0.7rem 1.9rem;
+    border-top: 1px solid var(--line); color: var(--silt); font-size: 0.97rem; line-height: 1.5;
+  }
+  .sc-list li::before {
+    content: ''; position: absolute; left: 0; top: 0.85rem;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B7E99' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 8px no-repeat;
+  }
+  @media (max-width: 760px) { .sc-grid { grid-template-columns: 1fr; } }
 
   .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
   .risk { border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem; background: var(--panel); box-shadow: var(--shadow-sm); }

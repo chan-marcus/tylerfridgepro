@@ -44,7 +44,6 @@ const baseSchema = {
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0B1520" />
@@ -131,11 +130,6 @@ const baseSchema = {
       <p>&copy; {new Date().getFullYear()} {SITE.brand}. All rights reserved.</p>
     </div>
   </footer>
-
-  <a class="call-bar" href={`tel:${SITE.phoneTel}`}>
-    <span class="open-dot" aria-hidden="true"></span>
-    <strong>Call {SITE.phoneVanity} &middot; Open 24/7</strong>
-  </a>
 </body>
 </html>
 
@@ -175,7 +169,7 @@ const baseSchema = {
   }
 
   /* dark surfaces re-scope the aliases */
-  .cta-panel, .site-footer, .call-bar {
+  .cta-panel, .site-footer {
     --paper: #F2F8F9;
     --silt: #9FB6C4;
     --cyan: var(--primary-bright);
@@ -446,24 +440,6 @@ const baseSchema = {
   .footer-legal p { font-size: 0.78rem; color: #66808F; max-width: 78ch; }
   .footer-legal p + p { margin-top: 0.6rem; }
 
-  /* ---------- fixed mobile call bar ---------- */
-  .call-bar {
-    position: fixed; bottom: 0.9rem; left: 0.9rem; right: 0.9rem; z-index: 60;
-    display: none;
-    align-items: center; justify-content: center; gap: 0.6rem;
-    background: var(--grad-cyan);
-    color: #04222B; text-decoration: none;
-    padding: 0.9rem 1.1rem;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 14px 30px -8px rgba(11, 21, 32, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  }
-  .call-bar .open-dot { background: #063540; box-shadow: none; animation: none; }
-  .call-bar strong {
-    font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: #04222B;
-    line-height: 1; letter-spacing: -0.01em;
-  }
-
   /* ---------- responsive ---------- */
   @media (max-width: 900px) {
     .main-nav { display: none; }
@@ -472,9 +448,7 @@ const baseSchema = {
   @media (max-width: 640px) {
     .header-call { padding: 0.45rem 0.9rem; }
     .header-call-text small { display: none; }
-    .call-bar { display: flex; }
     section { padding: 3.6rem 0; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-    body { padding-bottom: 4.5rem; }
   }
 </style>
