@@ -46,9 +46,9 @@ const mapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
           <p><a href="/areas/">See all areas &rarr;</a></p>
         </div>
         <div class="side-card map-card">
-          <h3>Based in Tyler, TX</h3>
+          <h3>Our service area</h3>
           {mapsKey ? (
-            <div id="tfp-map" class="gmap" role="img" aria-label="Interactive map of Tyler, TX"></div>
+            <div id="tfp-map" class="gmap" role="img" aria-label="Map of the Tyler, TX service area"></div>
           ) : (
             <iframe
               title="Map of Tyler, TX and the surrounding service area"
@@ -58,29 +58,44 @@ const mapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
               allowfullscreen></iframe>
           )}
           <p><a href="https://www.google.com/maps/place/Tyler,+TX" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></p>
-          <script define:vars={{ mapsKey, lat: SITE.geo.lat, lng: SITE.geo.lng, brand: SITE.brand }}>
+          <script define:vars={{ mapsKey, tyler: { lat: SITE.geo.lat, lng: SITE.geo.lng }, cities: CITIES.map((c) => ({ name: c.name, lat: c.lat, lng: c.lng })) }}>
             if (mapsKey) {
               window.__initTFPMap = function () {
-                const center = { lat: lat, lng: lng };
                 const map = new google.maps.Map(document.getElementById('tfp-map'), {
-                  center: center, zoom: 11,
+                  center: tyler, zoom: 10,
                   mapTypeControl: false, streetViewControl: false, fullscreenControl: true,
                   styles: [
                     { elementType: 'geometry', stylers: [{ color: '#0f2330' }] },
                     { elementType: 'labels.text.stroke', stylers: [{ color: '#0b1520' }] },
-                    { elementType: 'labels.text.fill', stylers: [{ color: '#8fa6b4' }] },
+                    { elementType: 'labels.text.fill', stylers: [{ color: '#9fb6c4' }] },
                     { featureType: 'administrative', elementType: 'geometry', stylers: [{ color: '#2c4a57' }] },
                     { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#1b3140' }] },
-                    { featureType: 'road', elementType: 'labels.text.fill', stylers: [{ color: '#9fb6c4' }] },
+                    { featureType: 'road', elementType: 'labels', stylers: [{ visibility: 'off' }] },
                     { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#0a1620' }] },
                     { featureType: 'poi', stylers: [{ visibility: 'off' }] },
                     { featureType: 'transit', stylers: [{ visibility: 'off' }] }
                   ]
                 });
-                new google.maps.Marker({
-                  position: center, map: map, title: brand,
-                  icon: { path: google.maps.SymbolPath.CIRCLE, scale: 8, fillColor: '#4FD1E9', fillOpacity: 1, strokeColor: '#0B1520', strokeWeight: 2 }
+                const circle = new google.maps.Circle({
+                  map: map, center: tyler, radius: 42000, clickable: false,
+                  strokeColor: '#4FD1E9', strokeOpacity: 0.55, strokeWeight: 1.5,
+                  fillColor: '#2FBDDA', fillOpacity: 0.12
                 });
+                cities.forEach(function (c) {
+                  const isHub = c.name === 'Tyler';
+                  new google.maps.Marker({
+                    position: { lat: c.lat, lng: c.lng }, map: map, title: c.name,
+                    zIndex: isHub ? 10 : 1,
+                    icon: {
+                      path: google.maps.SymbolPath.CIRCLE,
+                      scale: isHub ? 9 : 6,
+                      fillColor: isHub ? '#4FD1E9' : '#8BE7F5',
+                      fillOpacity: 1,
+                      strokeColor: '#0B1520', strokeWeight: isHub ? 3 : 2
+                    }
+                  });
+                });
+                map.fitBounds(circle.getBounds());
               };
               const s = document.createElement('script');
               s.src = 'https://maps.googleapis.com/maps/api/js?key=' + mapsKey + '&callback=__initTFPMap&loading=async';
@@ -115,7 +130,7 @@ const mapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     filter: grayscale(0.2);
   }
   .gmap {
-    width: 100%; height: 240px; margin-top: 0.8rem;
+    width: 100%; height: 300px; margin-top: 0.8rem;
     border-radius: 10px; overflow: hidden; background: var(--navy);
   }
   @media (max-width: 800px) {

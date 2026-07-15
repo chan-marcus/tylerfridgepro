@@ -3,6 +3,8 @@
 export interface City {
   slug: string;
   name: string;
+  lat: number;           // service-area map coordinates
+  lng: number;
   county: string;
   short: string;         // card blurb
   h1: string;
@@ -15,6 +17,8 @@ export const CITIES: City[] = [
   {
     slug: 'tyler',
     name: 'Tyler',
+    lat: 32.3513,
+    lng: -95.3011,
     county: 'Smith County',
     short: 'The Rose City hub: restaurants, C-stores, and markets that all live or die by their refrigeration.',
     h1: 'Commercial Refrigeration Repair in Tyler, TX',
@@ -32,6 +36,8 @@ export const CITIES: City[] = [
   {
     slug: 'whitehouse',
     name: 'Whitehouse',
+    lat: 32.2213,
+    lng: -95.2266,
     county: 'Smith County',
     short: 'Growing bedroom community south of Tyler with a steady base of local restaurants and stores.',
     h1: 'Commercial Refrigeration Repair in Whitehouse, TX',
@@ -49,6 +55,8 @@ export const CITIES: City[] = [
   {
     slug: 'bullard',
     name: 'Bullard',
+    lat: 32.1421,
+    lng: -95.3125,
     county: 'Smith County',
     short: 'Fast-growing town on the Smith and Cherokee county line with new commercial development.',
     h1: 'Commercial Refrigeration Repair in Bullard, TX',
@@ -66,6 +74,8 @@ export const CITIES: City[] = [
   {
     slug: 'lindale',
     name: 'Lindale',
+    lat: 32.5124,
+    lng: -95.4088,
     county: 'Smith County',
     short: 'I-20 crossroads town with highway travel-stop coolers, restaurants, and a busy commercial strip.',
     h1: 'Commercial Refrigeration Repair in Lindale, TX',
@@ -83,6 +93,8 @@ export const CITIES: City[] = [
   {
     slug: 'chandler',
     name: 'Chandler',
+    lat: 32.3060,
+    lng: -95.4779,
     county: 'Henderson County',
     short: 'Lake Palestine gateway in Henderson County with seasonal restaurants and marina-area stores.',
     h1: 'Commercial Refrigeration Repair in Chandler, TX',
@@ -100,6 +112,8 @@ export const CITIES: City[] = [
   {
     slug: 'flint',
     name: 'Flint',
+    lat: 32.2385,
+    lng: -95.3960,
     county: 'Smith County',
     short: 'Lake Palestine community just south of Tyler with convenience stores and local eateries.',
     h1: 'Commercial Refrigeration Repair in Flint, TX',
@@ -117,6 +131,8 @@ export const CITIES: City[] = [
   {
     slug: 'arp',
     name: 'Arp',
+    lat: 32.2313,
+    lng: -95.0619,
     county: 'Smith County',
     short: 'Small Smith County town east of Tyler where local stores and diners need dependable cold.',
     h1: 'Commercial Refrigeration Repair in Arp, TX',
@@ -134,6 +150,8 @@ export const CITIES: City[] = [
   {
     slug: 'winona',
     name: 'Winona',
+    lat: 32.4926,
+    lng: -95.1741,
     county: 'Smith County',
     short: 'I-20 town northeast of Tyler with truck-stop coolers and highway convenience stores.',
     h1: 'Commercial Refrigeration Repair in Winona, TX',
