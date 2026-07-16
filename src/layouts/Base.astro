@@ -71,7 +71,7 @@ const baseSchema = {
         </svg>
         <span class="logo-text">Tyler <em>Fridge Pro</em></span>
       </a>
-      <nav class="main-nav" aria-label="Main">
+      <nav class="main-nav" id="site-nav" aria-label="Main">
         <a href="/services/">Services</a>
         <a href="/areas/">Areas</a>
         <a href="/about/">About</a>
@@ -85,6 +85,10 @@ const baseSchema = {
           <small>Open 24/7 &middot; Tap to call</small>
         </span>
       </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
     </div>
   </header>
 
@@ -131,6 +135,21 @@ const baseSchema = {
       <p>&copy; {new Date().getFullYear()} {SITE.brand}. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const h = document.querySelector('.site-header');
+      const b = document.querySelector('.nav-toggle');
+      const n = document.getElementById('site-nav');
+      if (!h || !b || !n) return;
+      const set = (open) => {
+        h.classList.toggle('nav-open', open);
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+      b.addEventListener('click', () => set(b.getAttribute('aria-expanded') !== 'true'));
+      n.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
+    })();
+  </script>
 </body>
 </html>
 
@@ -292,6 +311,17 @@ const baseSchema = {
   .header-call-text strong { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: #04222B; letter-spacing: -0.01em; }
   .header-call-text small { font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; color: #0A3A49; }
 
+  .nav-toggle {
+    display: none; align-items: center; justify-content: center;
+    width: 42px; height: 42px; flex-shrink: 0; margin-left: 0.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--dark-line); border-radius: 10px;
+    color: #CFE0E8; cursor: pointer;
+  }
+  .nav-toggle .icon-close { display: none; }
+  .site-header.nav-open .nav-toggle .icon-open { display: none; }
+  .site-header.nav-open .nav-toggle .icon-close { display: block; }
+
   .open-dot {
     width: 8px; height: 8px; border-radius: 50%;
     background: var(--pulse); flex-shrink: 0;
@@ -443,12 +473,29 @@ const baseSchema = {
 
   /* ---------- responsive ---------- */
   @media (max-width: 900px) {
-    .main-nav { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .header-call { margin-left: auto; }
+    .main-nav {
+      display: none; margin: 0; gap: 0; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: rgba(11, 21, 32, 0.97);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--dark-line);
+      padding: 0.2rem 1.5rem 1rem;
+    }
+    .site-header.nav-open .main-nav { display: flex; }
+    .main-nav a { padding: 0.9rem 0.15rem; border-top: 1px solid var(--dark-line); font-size: 1rem; color: #CFE0E8; }
+    .main-nav a:hover { color: #fff; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
-    .header-call { padding: 0.45rem 0.9rem; }
+    .header-inner { gap: 0.55rem; }
+    .logo-mark { width: 30px; height: 30px; padding: 5px; }
+    .logo-text { font-size: 1.02rem; white-space: nowrap; }
+    .header-call { padding: 0.42rem 0.75rem; }
+    .header-call-text strong { font-size: 0.88rem; }
     .header-call-text small { display: none; }
+    .nav-toggle { width: 40px; height: 40px; margin-left: 0.35rem; }
     section { padding: 3.6rem 0; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
   }
