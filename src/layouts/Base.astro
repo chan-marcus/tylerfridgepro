@@ -34,6 +34,15 @@ const baseSchema = {
   },
   priceRange: '$$'
 };
+
+// Tells Google the site name for the homepage title link (otherwise it
+// falls back to the bare domain).
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.brand,
+  url: SITE.domain
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -51,12 +60,14 @@ const baseSchema = {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={SITE.brand} />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={SITE.domain + '/og.png'} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
   {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
 </head>
 <body>
