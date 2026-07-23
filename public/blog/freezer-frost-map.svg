@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frost map of a walk-in freezer interior showing ice at the door, on the evaporator coil, and on the floor">
+  <rect width="1200" height="630" fill="#0B1520"/>
+
+  <!-- floor -->
+  <rect x="0" y="520" width="1200" height="110" fill="#0E1C2E"/>
+  <line x1="0" y1="520" x2="1200" y2="520" stroke="#1E3450" stroke-width="3"/>
+
+  <!-- wall panel seams -->
+  <line x1="420" y1="40" x2="420" y2="520" stroke="#152740" stroke-width="2"/>
+  <line x1="720" y1="40" x2="720" y2="520" stroke="#152740" stroke-width="2"/>
+  <line x1="1040" y1="40" x2="1040" y2="520" stroke="#152740" stroke-width="2"/>
+
+  <!-- door -->
+  <rect x="120" y="130" width="210" height="390" rx="10" fill="#12233A" stroke="#2C4A6E" stroke-width="4"/>
+  <rect x="150" y="160" width="150" height="200" rx="6" fill="none" stroke="#1E3450" stroke-width="3"/>
+  <rect x="296" y="300" width="14" height="60" rx="6" fill="#2C4A6E"/>
+  <!-- frost ring leaking around the door frame -->
+  <rect x="112" y="122" width="226" height="406" rx="14" fill="none" stroke="#9FE2F6" stroke-width="10" opacity="0.35"/>
+  <rect x="120" y="130" width="210" height="390" rx="10" fill="none" stroke="#D9F4FE" stroke-width="4" opacity="0.8"/>
+  <path d="M130 140 l16 26 14 -26 15 24 14 -24 16 22 14 -22 15 20 14 -20 16 22 14 -22 15 24 14 -24 16 26" fill="none" stroke="#D9F4FE" stroke-width="5" opacity="0.85" stroke-linejoin="round"/>
+  <path d="M132 512 l14 -20 14 20 14 -18 14 18 14 -22 14 22 14 -18 14 18" fill="none" stroke="#BFEAF8" stroke-width="5" opacity="0.7" stroke-linejoin="round"/>
+
+  <!-- evaporator unit -->
+  <rect x="760" y="80" width="360" height="120" rx="12" fill="#12233A" stroke="#2C4A6E" stroke-width="4"/>
+  <circle cx="850" cy="140" r="36" fill="none" stroke="#2C4A6E" stroke-width="4"/>
+  <circle cx="850" cy="140" r="22" fill="none" stroke="#1E3450" stroke-width="3"/>
+  <path d="M850 140 l0 -18 M850 140 l16 9 M850 140 l-16 9" stroke="#2C4A6E" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="960" cy="140" r="36" fill="none" stroke="#2C4A6E" stroke-width="4"/>
+  <circle cx="960" cy="140" r="22" fill="none" stroke="#1E3450" stroke-width="3"/>
+  <path d="M960 140 l0 -18 M960 140 l16 9 M960 140 l-16 9" stroke="#2C4A6E" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1030" y1="100" x2="1100" y2="100" stroke="#1E3450" stroke-width="3"/>
+  <line x1="1030" y1="118" x2="1100" y2="118" stroke="#1E3450" stroke-width="3"/>
+  <line x1="1030" y1="136" x2="1100" y2="136" stroke="#1E3450" stroke-width="3"/>
+  <line x1="1030" y1="154" x2="1100" y2="154" stroke="#1E3450" stroke-width="3"/>
+
+  <!-- ice encasing the coil end -->
+  <path d="M760 92 q40 -26 96 -12 q30 8 30 42 q0 40 -34 62 q-46 28 -92 12 z" fill="#DFF6FF" opacity="0.9"/>
+  <path d="M775 100 q30 -16 66 -8 q20 6 20 30 q0 28 -24 44 q-32 18 -62 8 z" fill="#AFE6F9" opacity="0.8"/>
+
+  <!-- icicles under the unit -->
+  <path d="M790 200 l10 52 l10 -52 z" fill="#BFEAF8"/>
+  <path d="M822 200 l8 34 l8 -34 z" fill="#BFEAF8"/>
+  <path d="M900 200 l9 44 l9 -44 z" fill="#BFEAF8"/>
+  <path d="M985 200 l8 30 l8 -30 z" fill="#BFEAF8"/>
+  <path d="M1050 200 l10 58 l10 -58 z" fill="#BFEAF8"/>
+
+  <!-- frozen drain trail and floor sheet -->
+  <rect x="928" y="200" width="10" height="310" fill="#BFEAF8" opacity="0.55"/>
+  <ellipse cx="935" cy="528" rx="180" ry="26" fill="#9FE2F6" opacity="0.55"/>
+  <ellipse cx="935" cy="524" rx="120" ry="16" fill="#DFF6FF" opacity="0.85"/>
+  <path d="M905 505 l14 -22 14 22 z" fill="#DFF6FF"/>
+  <path d="M933 505 l11 -16 11 16 z" fill="#AFE6F9"/>
+
+  <!-- temperature badge -->
+  <rect x="450" y="120" width="200" height="96" rx="14" fill="#0F2036" stroke="#2C4A6E" stroke-width="3"/>
+  <text x="478" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="42" font-weight="700" fill="#F2A93B">14&#176;F</text>
+  <path d="M596 176 l0 -34 M596 142 l-11 14 M596 142 l11 14" stroke="#F2A93B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="478" y="200" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" letter-spacing="2" fill="#7FA6BD">AND CLIMBING</text>
+
+  <!-- callout labels -->
+  <circle cx="330" cy="330" r="6" fill="#6FD3EF"/>
+  <line x1="336" y1="330" x2="430" y2="382" stroke="#6FD3EF" stroke-width="2"/>
+  <text x="440" y="390" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" letter-spacing="3" fill="#9FD9EE">DOOR SEAL</text>
+
+  <circle cx="812" cy="118" r="6" fill="#6FD3EF"/>
+  <line x1="806" y1="118" x2="700" y2="60" stroke="#6FD3EF" stroke-width="2"/>
+  <text x="520" y="52" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" letter-spacing="3" fill="#9FD9EE">ICED COIL</text>
+
+  <circle cx="820" cy="540" r="6" fill="#6FD3EF"/>
+  <line x1="814" y1="540" x2="700" y2="588" stroke="#6FD3EF" stroke-width="2"/>
+  <text x="470" y="596" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" letter-spacing="3" fill="#9FD9EE">FROZEN DRAIN</text>
+
+  <!-- ambient frost flecks -->
+  <circle cx="560" cy="280" r="3" fill="#9FE2F6" opacity="0.6"/>
+  <circle cx="640" cy="230" r="2.5" fill="#9FE2F6" opacity="0.5"/>
+  <circle cx="710" cy="300" r="3" fill="#9FE2F6" opacity="0.5"/>
+  <circle cx="470" cy="330" r="2.5" fill="#9FE2F6" opacity="0.45"/>
+  <circle cx="1130" cy="260" r="3" fill="#9FE2F6" opacity="0.5"/>
+  <circle cx="1080" cy="340" r="2.5" fill="#9FE2F6" opacity="0.45"/>
+</svg>
