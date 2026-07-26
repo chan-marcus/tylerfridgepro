@@ -253,12 +253,13 @@ export const SERVICES: Service[] = [
       { title: 'Right-sized systems', body: 'Equipment matched to your load and space so it holds temperature without short-cycling or running nonstop.' },
       { title: 'Clean installation', body: 'Proper line sets, drainage, and electrical done to code and to last, not just to pass a first glance.' },
       { title: 'Documented startup', body: 'Verified charge, temperatures, and controls at commissioning so the system runs at spec from day one.' },
-      { title: 'Coolers, freezers, and ice', body: 'Walk-ins, reach-ins, freezers, and ice machines for kitchens, bars, C-stores, and markets.' }
+      { title: 'Ice machine installation', body: 'Water supply, filtration, drain line, electrical, and leveling done right, then a startup check on the first harvest cycles.' }
     ],
     faq: [
       { q: 'Can you help me pick the right size unit?', a: 'Yes. Sizing is part of the job, and getting it right up front prevents the efficiency and reliability problems that come from an under- or oversized system.' },
       { q: 'Do you install equipment I already bought?', a: 'In most cases, yes. A tech can install and commission owner-supplied equipment, verifying it starts up and holds temperature correctly.' },
-      { q: 'How long does a walk-in installation take?', a: 'It varies with the scope, from a single reach-in swap in a few hours to a multi-day walk-in buildout. A tech will give you a realistic timeline for your project.' }
+      { q: 'How long does a walk-in installation take?', a: 'It varies with the scope, from a single reach-in swap in a few hours to a multi-day walk-in buildout. A tech will give you a realistic timeline for your project.' },
+      { q: 'Do you install commercial ice machines?', a: 'Yes. Ice machine installation covers the water supply and filtration, the drain line, electrical, and leveling, plus a startup check on the first harvest cycles. In hard-water East Texas, getting the filtration right at install is what keeps scale from throttling production later.' }
     ]
   },
   {
