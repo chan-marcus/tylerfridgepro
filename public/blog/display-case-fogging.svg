@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-door refrigerated display case, one door fogged over with condensation and the other clear, showing product inside">
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.16"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CFE0E8" stop-opacity="0.44"/>
+      <stop offset="1" stop-color="#CFE0E8" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <rect x="200" y="70" width="800" height="470" rx="18" fill="#0F2330" stroke="#2C4A57" stroke-width="4"/>
+  <rect x="200" y="70" width="800" height="58" rx="18" fill="#12303F"/>
+  <rect x="200" y="112" width="800" height="16" fill="#12303F"/>
+  <circle cx="248" cy="99" r="7" fill="#4FD1E9" fill-opacity="0.75"/>
+
+  <g>
+    <rect x="236" y="158" width="352" height="336" rx="10" fill="#0A1620" stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.35"/>
+    <g fill="#1B3140" fill-opacity="0.9">
+      <rect x="262" y="196" width="300" height="14" rx="4"/>
+      <rect x="262" y="298" width="300" height="14" rx="4"/>
+      <rect x="262" y="400" width="300" height="14" rx="4"/>
+    </g>
+    <g fill="#22485A" fill-opacity="0.55">
+      <rect x="278" y="230" width="46" height="66" rx="5"/>
+      <rect x="338" y="238" width="46" height="58" rx="5"/>
+      <rect x="398" y="228" width="46" height="68" rx="5"/>
+      <rect x="458" y="240" width="46" height="56" rx="5"/>
+      <rect x="278" y="332" width="46" height="66" rx="5"/>
+      <rect x="338" y="340" width="46" height="58" rx="5"/>
+      <rect x="398" y="330" width="46" height="68" rx="5"/>
+    </g>
+    <rect x="236" y="158" width="352" height="336" rx="10" fill="url(#fog)"/>
+    <g fill="#EAF6F9" fill-opacity="0.5">
+      <ellipse cx="300" cy="220" rx="5" ry="7"/>
+      <ellipse cx="356" cy="268" rx="4" ry="6"/>
+      <ellipse cx="420" cy="212" rx="6" ry="8"/>
+      <ellipse cx="486" cy="286" rx="5" ry="7"/>
+      <ellipse cx="330" cy="352" rx="6" ry="8"/>
+      <ellipse cx="452" cy="392" rx="4" ry="6"/>
+      <ellipse cx="530" cy="330" rx="5" ry="7"/>
+      <ellipse cx="272" cy="430" rx="4" ry="6"/>
+      <ellipse cx="392" cy="454" rx="5" ry="7"/>
+      <ellipse cx="512" cy="440" rx="4" ry="6"/>
+    </g>
+    <g stroke="#EAF6F9" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round">
+      <path d="M300 227 v26"/>
+      <path d="M420 220 v30"/>
+      <path d="M330 360 v24"/>
+    </g>
+    <rect x="576" y="300" width="10" height="56" rx="5" fill="#4FD1E9" fill-opacity="0.5"/>
+  </g>
+
+  <g>
+    <rect x="612" y="158" width="352" height="336" rx="10" fill="#0A1620" stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.95"/>
+    <g fill="#1B3140">
+      <rect x="638" y="196" width="300" height="14" rx="4"/>
+      <rect x="638" y="298" width="300" height="14" rx="4"/>
+      <rect x="638" y="400" width="300" height="14" rx="4"/>
+    </g>
+    <g fill="#2C6479">
+      <rect x="654" y="230" width="46" height="66" rx="5"/>
+      <rect x="714" y="238" width="46" height="58" rx="5"/>
+      <rect x="774" y="228" width="46" height="68" rx="5"/>
+      <rect x="834" y="240" width="46" height="56" rx="5"/>
+      <rect x="654" y="332" width="46" height="66" rx="5"/>
+      <rect x="714" y="340" width="46" height="58" rx="5"/>
+      <rect x="774" y="330" width="46" height="68" rx="5"/>
+      <rect x="834" y="342" width="46" height="56" rx="5"/>
+    </g>
+    <rect x="624" y="300" width="10" height="56" rx="5" fill="#4FD1E9"/>
+  </g>
+
+  <text x="412" y="566" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#CFE0E8" text-anchor="middle">FOGGED</text>
+  <text x="412" y="600" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#7C93A6" text-anchor="middle">Nobody buys what they cannot see</text>
+
+  <text x="788" y="566" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#4FD1E9" text-anchor="middle">CLEAR</text>
+  <text x="788" y="600" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#7C93A6" text-anchor="middle">Sealed, heated, and holding temp</text>
+</svg>

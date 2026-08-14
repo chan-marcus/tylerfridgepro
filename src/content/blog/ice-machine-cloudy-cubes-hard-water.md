@@ -36,3 +36,5 @@ Manufacturers usually call for cleaning and sanitizing at least twice a year. In
 If a machine has been descaled and still won't produce, the problem has usually moved on to the water inlet valve, the float, the pump, or the refrigeration side, all fixable, but a tech should look. And if cloudy cubes have been ignored for a long time, the scale may have already stressed other components.
 
 Cloudy ice is the machine asking for a cleaning before it asks for a repair. Stay ahead of it and you'll keep full bins right through the summer.
+
+If your cubes have gone cloudy or production has dropped off, we handle [commercial ice machine repair](/services/commercial-ice-machine-repair/) throughout Tyler and East Texas, and scheduled [preventive maintenance](/services/refrigeration-preventive-maintenance/) keeps hard-water scale from becoming a breakdown.

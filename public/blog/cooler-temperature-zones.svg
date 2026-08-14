@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A temperature scale showing the freezer zone, the safe cooler range of 33 to 41 degrees, and the danger zone above 41 degrees where food safety violations begin">
+  <defs>
+    <radialGradient id="glow2" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <text x="120" y="120" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#F5F9FB">The number an inspector checks</text>
+  <text x="120" y="162" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9FB6C4">Cold holding has one hard line, and it is 41&#176;F</text>
+
+  <g>
+    <rect x="120" y="250" width="300" height="96" rx="10" fill="#0E7C93"/>
+    <rect x="420" y="250" width="340" height="96" fill="#2FBDDA"/>
+    <rect x="760" y="250" width="320" height="96" rx="10" fill="#C4544A"/>
+    <rect x="410" y="250" width="20" height="96" fill="#1A9CBB"/>
+    <rect x="750" y="250" width="20" height="96" fill="#7FA0A8"/>
+  </g>
+
+  <text x="270" y="308" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#04222B" text-anchor="middle">FREEZER</text>
+  <text x="590" y="308" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#04222B" text-anchor="middle">COLD HOLDING</text>
+  <text x="920" y="308" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#2B0C0A" text-anchor="middle">DANGER ZONE</text>
+
+  <g stroke="#4A6474" stroke-width="2">
+    <path d="M120 360 v22"/>
+    <path d="M420 360 v22"/>
+    <path d="M760 360 v40"/>
+    <path d="M1080 360 v22"/>
+  </g>
+
+  <text x="120" y="410" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9FB6C4" text-anchor="start">0&#176;F and below</text>
+  <text x="420" y="410" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9FB6C4" text-anchor="middle">33&#176;F</text>
+  <text x="1080" y="410" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#9FB6C4" text-anchor="end">70&#176;F+</text>
+
+  <g>
+    <rect x="646" y="424" width="228" height="74" rx="12" fill="#0F2330" stroke="#C4544A" stroke-width="3"/>
+    <text x="760" y="456" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#F5F9FB" text-anchor="middle">41&#176;F</text>
+    <text x="760" y="484" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#E1A09A" text-anchor="middle">the line you cannot cross</text>
+  </g>
+
+  <g fill="#7C93A6" font-family="Helvetica, Arial, sans-serif" font-size="21">
+    <text x="120" y="556">Above 41&#176;F, bacteria growth accelerates and the clock starts.</text>
+    <text x="120" y="590">Four hours in the danger zone is the difference between product and a loss.</text>
+  </g>
+</svg>

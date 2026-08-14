@@ -32,3 +32,5 @@ Don't keep resetting a breaker that trips; a unit that trips repeatedly needs a 
 ## When to call
 
 If the box is above 41°F and climbing, or you've spotted a leak, an iced coil, or a compressor that won't run, that's a call, not a wait-until-morning. The sooner a tech is on the way, the more product survives. Dispatch answers around the clock; have the unit's make and model handy if you can find it, along with the temperature timeline you started at the top of this list.
+
+We handle [walk-in cooler repair](/services/walk-in-cooler-repair/) and 24/7 [emergency refrigeration service](/services/emergency-refrigeration-service/) across Tyler and East Texas. If this is a repeat problem rather than a one-off, [preventive maintenance](/services/refrigeration-preventive-maintenance/) is usually what breaks the cycle.
