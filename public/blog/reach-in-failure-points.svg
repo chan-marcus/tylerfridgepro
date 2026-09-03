@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A reach-in cooler with five numbered failure points labeled: condenser coil behind the kick plate, door gasket, evaporator fan, thermostat, and blocked airflow from overloading">
+  <defs>
+    <radialGradient id="rg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <rect x="120" y="60" width="360" height="510" rx="16" fill="#0F2330" stroke="#2C4A57" stroke-width="4"/>
+
+  <rect x="140" y="78" width="320" height="54" rx="8" fill="#12303F"/>
+  <rect x="300" y="94" width="140" height="22" rx="6" fill="#0A1620" stroke="#4FD1E9" stroke-width="2"/>
+  <text x="370" y="111" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#4FD1E9" text-anchor="middle">38&#176;F</text>
+
+  <rect x="146" y="150" width="308" height="330" rx="10" fill="#0A1620" stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.55"/>
+  <rect x="152" y="156" width="296" height="318" rx="8" fill="none" stroke="#2FBDDA" stroke-width="6" stroke-opacity="0.35"/>
+
+  <g stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.85">
+    <path d="M186 172 h228"/><path d="M198 186 h204"/>
+  </g>
+
+  <g fill="#1B3140">
+    <rect x="176" y="212" width="248" height="12" rx="4"/>
+    <rect x="176" y="316" width="248" height="12" rx="4"/>
+  </g>
+  <g fill="#2C6479" fill-opacity="0.85">
+    <rect x="192" y="240" width="42" height="60" rx="5"/>
+    <rect x="248" y="248" width="42" height="52" rx="5"/>
+    <rect x="304" y="238" width="42" height="62" rx="5"/>
+    <rect x="360" y="250" width="42" height="50" rx="5"/>
+    <rect x="192" y="344" width="42" height="60" rx="5"/>
+    <rect x="248" y="352" width="42" height="52" rx="5"/>
+    <rect x="304" y="342" width="42" height="62" rx="5"/>
+    <rect x="360" y="354" width="42" height="50" rx="5"/>
+  </g>
+  <rect x="430" y="290" width="12" height="60" rx="6" fill="#4FD1E9"/>
+
+  <rect x="146" y="496" width="308" height="56" rx="8" fill="#12303F" stroke="#2C4A57" stroke-width="3"/>
+  <g stroke="#7C93A6" stroke-width="3" stroke-opacity="0.8">
+    <path d="M172 508 v32"/><path d="M196 508 v32"/><path d="M220 508 v32"/><path d="M244 508 v32"/>
+    <path d="M268 508 v32"/><path d="M292 508 v32"/><path d="M316 508 v32"/><path d="M340 508 v32"/>
+    <path d="M364 508 v32"/><path d="M388 508 v32"/><path d="M412 508 v32"/>
+  </g>
+
+  <g stroke="#4A6474" stroke-width="2" stroke-dasharray="5 5">
+    <path d="M440 105 H560"/>
+    <path d="M300 179 H560"/>
+    <path d="M150 300 H560"/>
+    <path d="M404 374 H560"/>
+    <path d="M300 524 H560"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <circle cx="592" cy="524" r="19" fill="#4FD1E9"/>
+    <text x="592" y="532" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">1</text>
+    <text x="624" y="520" font-size="23" font-weight="700" fill="#F5F9FB">Condenser coil</text>
+    <text x="624" y="546" font-size="18" fill="#7C93A6">Grease and dust behind the kick plate</text>
+
+    <circle cx="592" cy="300" r="19" fill="#4FD1E9"/>
+    <text x="592" y="308" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">2</text>
+    <text x="624" y="296" font-size="23" font-weight="700" fill="#F5F9FB">Door gasket</text>
+    <text x="624" y="322" font-size="18" fill="#7C93A6">Hard, torn, or not sealing</text>
+
+    <circle cx="592" cy="179" r="19" fill="#4FD1E9"/>
+    <text x="592" y="187" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">3</text>
+    <text x="624" y="175" font-size="23" font-weight="700" fill="#F5F9FB">Evaporator fan</text>
+    <text x="624" y="201" font-size="18" fill="#7C93A6">A quiet fan means no airflow</text>
+
+    <circle cx="592" cy="105" r="19" fill="#4FD1E9"/>
+    <text x="592" y="113" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">4</text>
+    <text x="624" y="101" font-size="23" font-weight="700" fill="#F5F9FB">Thermostat</text>
+    <text x="624" y="127" font-size="18" fill="#7C93A6">Drifted out of calibration</text>
+
+    <circle cx="592" cy="374" r="19" fill="#4FD1E9"/>
+    <text x="592" y="382" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">5</text>
+    <text x="624" y="370" font-size="23" font-weight="700" fill="#F5F9FB">Blocked airflow</text>
+    <text x="624" y="396" font-size="18" fill="#7C93A6">Product stacked against the air return</text>
+  </g>
+</svg>

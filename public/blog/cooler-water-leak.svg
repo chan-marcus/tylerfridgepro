@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cutaway of a walk-in cooler showing condensate forming on the evaporator coil, running to the drain pan, hitting a clogged drain line, and overflowing as water on the floor">
+  <defs>
+    <radialGradient id="lg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#lg)"/>
+
+  <rect x="130" y="70" width="620" height="420" rx="14" fill="#0F2330" stroke="#2C4A57" stroke-width="4"/>
+
+  <rect x="200" y="120" width="290" height="70" rx="8" fill="#12303F" stroke="#4FD1E9" stroke-width="3"/>
+  <g stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.8">
+    <path d="M220 120 v70"/><path d="M250 120 v70"/><path d="M280 120 v70"/>
+    <path d="M310 120 v70"/><path d="M340 120 v70"/><path d="M370 120 v70"/>
+    <path d="M400 120 v70"/><path d="M430 120 v70"/><path d="M460 120 v70"/>
+  </g>
+  <text x="510" y="150" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#4FD1E9">1  Condensate forms</text>
+  <text x="510" y="178" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#7C93A6">on the evaporator coil</text>
+
+  <g fill="#7FE3F2" fill-opacity="0.75">
+    <ellipse cx="240" cy="208" rx="5" ry="8"/>
+    <ellipse cx="310" cy="222" rx="5" ry="8"/>
+    <ellipse cx="380" cy="206" rx="5" ry="8"/>
+    <ellipse cx="450" cy="220" rx="5" ry="8"/>
+  </g>
+
+  <path d="M196 250 h298 l-22 40 h-254 Z" fill="#12303F" stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.7"/>
+  <rect x="212" y="258" width="266" height="12" rx="6" fill="#2FBDDA" fill-opacity="0.55"/>
+  <text x="510" y="272" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#CFE0E8">2  Drain pan catches it</text>
+
+  <path d="M345 290 v96 h330" fill="none" stroke="#2FBDDA" stroke-width="12" stroke-opacity="0.5" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="520" cy="386" r="30" fill="#C4544A"/>
+    <path d="M508 374 l24 24 M532 374 l-24 24" stroke="#0B1520" stroke-width="5" stroke-linecap="round"/>
+    <text x="566" y="380" font-family="Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#E1A09A">3  Clogged drain line</text>
+    <text x="566" y="406" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#7C93A6">slime, sludge, or ice</text>
+  </g>
+
+  <path d="M345 386 c -40 40 -90 50 -150 54 h -60" fill="none" stroke="#7FE3F2" stroke-width="9" stroke-opacity="0.75" stroke-linecap="round"/>
+
+  <rect x="130" y="452" width="620" height="38" rx="6" fill="#12303F"/>
+  <path d="M150 470 q 90 -22 190 0 q 90 22 190 0 q 70 -16 130 0 v 20 h -510 Z" fill="#2FBDDA" fill-opacity="0.5"/>
+
+  <text x="820" y="470" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#F5F9FB">4  Water on the floor</text>
+  <text x="820" y="500" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#7C93A6">A slip hazard and an</text>
+  <text x="820" y="526" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#7C93A6">inspection write-up</text>
+
+  <text x="820" y="150" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#F5F9FB">It is almost never</text>
+  <text x="820" y="188" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#4FD1E9">the box leaking</text>
+  <text x="820" y="228" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#9FB6C4">Condensate is normal. The</text>
+  <text x="820" y="254" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#9FB6C4">drain path is what failed.</text>
+</svg>

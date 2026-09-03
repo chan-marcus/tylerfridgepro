@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A commercial ice machine installation diagram showing the filtered water supply, the drain line with an air gap, the electrical connection, and required clearance around the cabinet">
+  <defs>
+    <radialGradient id="ig" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#ig)"/>
+
+  <g stroke="#4A6474" stroke-width="2" stroke-dasharray="6 6">
+    <path d="M430 60 h340"/>
+    <path d="M430 60 v58"/>
+    <path d="M770 60 v58"/>
+  </g>
+  <text x="600" y="46" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#7C93A6" text-anchor="middle">Clearance for airflow, or it starves for cool air</text>
+
+  <rect x="430" y="120" width="340" height="180" rx="12" fill="#0F2330" stroke="#4FD1E9" stroke-width="4"/>
+  <g stroke="#2FBDDA" stroke-width="3" stroke-opacity="0.6">
+    <path d="M462 160 h276"/><path d="M462 186 h276"/><path d="M462 212 h276"/><path d="M462 238 h276"/>
+  </g>
+  <text x="600" y="284" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#7C93A6" text-anchor="middle">ICE MAKER HEAD</text>
+
+  <rect x="430" y="308" width="340" height="210" rx="12" fill="#0F2330" stroke="#2C4A57" stroke-width="4"/>
+  <g fill="#2FBDDA" fill-opacity="0.45">
+    <rect x="470" y="380" width="46" height="46" rx="8"/>
+    <rect x="528" y="366" width="46" height="46" rx="8"/>
+    <rect x="586" y="384" width="46" height="46" rx="8"/>
+    <rect x="644" y="370" width="46" height="46" rx="8"/>
+    <rect x="500" y="432" width="46" height="46" rx="8"/>
+    <rect x="558" y="424" width="46" height="46" rx="8"/>
+    <rect x="616" y="436" width="46" height="46" rx="8"/>
+  </g>
+  <text x="600" y="504" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#7C93A6" text-anchor="middle">BIN</text>
+
+  <path d="M150 200 h140" stroke="#4FD1E9" stroke-width="9" stroke-linecap="round"/>
+  <rect x="290" y="164" width="58" height="92" rx="10" fill="#12303F" stroke="#4FD1E9" stroke-width="3"/>
+  <path d="M304 186 h30 M304 206 h30 M304 226 h30" stroke="#4FD1E9" stroke-width="3" stroke-opacity="0.75"/>
+  <path d="M348 200 h82" stroke="#4FD1E9" stroke-width="9" stroke-linecap="round"/>
+  <text x="100" y="108" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#F5F9FB">Water + filter</text>
+  <text x="100" y="134" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#7C93A6">Hard water clouds the cubes</text>
+
+  <path d="M600 518 v52" stroke="#2FBDDA" stroke-width="9" stroke-linecap="round"/>
+  <rect x="540" y="588" width="120" height="26" rx="6" fill="#12303F" stroke="#2C4A57" stroke-width="3"/>
+  <g stroke="#4A6474" stroke-width="2" stroke-dasharray="4 4">
+    <path d="M660 570 h120"/>
+  </g>
+  <text x="792" y="566" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#F5F9FB">Drain with air gap</text>
+  <text x="792" y="592" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#7C93A6">No air gap is a code violation</text>
+
+  <path d="M770 210 h140" stroke="#7FE3F2" stroke-width="7" stroke-linecap="round" stroke-opacity="0.8"/>
+  <rect x="910" y="186" width="46" height="48" rx="8" fill="#12303F" stroke="#7FE3F2" stroke-width="3"/>
+  <circle cx="924" cy="204" r="4" fill="#7FE3F2"/>
+  <circle cx="942" cy="204" r="4" fill="#7FE3F2"/>
+  <path d="M924 216 h18" stroke="#7FE3F2" stroke-width="3"/>
+  <text x="792" y="150" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#F5F9FB">Dedicated power</text>
+  <text x="792" y="176" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#7C93A6">Sized to the nameplate</text>
+</svg>
