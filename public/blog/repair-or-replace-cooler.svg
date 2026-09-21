@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision chart for a commercial cooler with five factors, each running from leans repair to leans replace: equipment age, repair cost against a new unit, refrigerant type, breakdown history, and energy use">
+  <defs>
+    <radialGradient id="rg" cx="0.15" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="track" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4FD1E9"/>
+      <stop offset="1" stop-color="#2C4A57"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="70" y="74" font-size="34" font-weight="700" fill="#F5F9FB">Repair or replace?</text>
+    <text x="70" y="106" font-size="20" fill="#7C93A6">Five factors that settle it</text>
+
+    <text x="330" y="156" font-size="15" font-weight="700" letter-spacing="2" fill="#4FD1E9">LEANS REPAIR</text>
+    <text x="1130" y="156" font-size="15" font-weight="700" letter-spacing="2" fill="#C9D6DE" text-anchor="end">LEANS REPLACE</text>
+  </g>
+
+  <g stroke="#F5F9FB" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M1060 44 V112"/>
+    <path d="M1036 114 H1084"/>
+    <path d="M1004 60 L1116 46"/>
+    <path d="M1004 60 L990 88 M1004 60 L1018 88"/>
+    <path d="M1116 46 L1102 74 M1116 46 L1130 74"/>
+  </g>
+  <path d="M986 88 Q1004 104 1022 88 Z" fill="#4FD1E9"/>
+  <path d="M1098 74 Q1116 90 1134 74 Z" fill="#7C93A6"/>
+  <circle cx="1060" cy="52" r="5" fill="#F5F9FB"/>
+
+  <g fill="url(#track)">
+    <rect x="330" y="192" width="800" height="12" rx="6"/>
+    <rect x="330" y="277" width="800" height="12" rx="6"/>
+    <rect x="330" y="362" width="800" height="12" rx="6"/>
+    <rect x="330" y="447" width="800" height="12" rx="6"/>
+    <rect x="330" y="532" width="800" height="12" rx="6"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <circle cx="88" cy="198" r="19" fill="#4FD1E9"/>
+    <text x="88" y="206" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">1</text>
+    <text x="120" y="206" font-size="24" font-weight="700" fill="#F5F9FB">Age</text>
+    <text x="330" y="232" font-size="17" fill="#9FB6C4">Under about 7 years</text>
+    <text x="1130" y="232" font-size="17" fill="#9FB6C4" text-anchor="end">Past 10 to 15 years</text>
+
+    <circle cx="88" cy="283" r="19" fill="#4FD1E9"/>
+    <text x="88" y="291" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">2</text>
+    <text x="120" y="291" font-size="24" font-weight="700" fill="#F5F9FB">Repair cost</text>
+    <text x="330" y="317" font-size="17" fill="#9FB6C4">Well under half of new</text>
+    <text x="1130" y="317" font-size="17" fill="#9FB6C4" text-anchor="end">Half of new or more</text>
+
+    <circle cx="88" cy="368" r="19" fill="#4FD1E9"/>
+    <text x="88" y="376" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">3</text>
+    <text x="120" y="376" font-size="24" font-weight="700" fill="#F5F9FB">Refrigerant</text>
+    <text x="330" y="402" font-size="17" fill="#9FB6C4">Current refrigerant</text>
+    <text x="1130" y="402" font-size="17" fill="#9FB6C4" text-anchor="end">R-22 with a leak</text>
+
+    <circle cx="88" cy="453" r="19" fill="#4FD1E9"/>
+    <text x="88" y="461" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">4</text>
+    <text x="120" y="461" font-size="24" font-weight="700" fill="#F5F9FB">History</text>
+    <text x="330" y="487" font-size="17" fill="#9FB6C4">First real failure</text>
+    <text x="1130" y="487" font-size="17" fill="#9FB6C4" text-anchor="end">Third major repair in two years</text>
+
+    <circle cx="88" cy="538" r="19" fill="#4FD1E9"/>
+    <text x="88" y="546" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">5</text>
+    <text x="120" y="546" font-size="24" font-weight="700" fill="#F5F9FB">Energy use</text>
+    <text x="330" y="572" font-size="17" fill="#9FB6C4">Cycles normally</text>
+    <text x="1130" y="572" font-size="17" fill="#9FB6C4" text-anchor="end">Runs nonstop all summer</text>
+  </g>
+</svg>

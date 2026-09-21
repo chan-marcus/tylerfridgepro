@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A commercial refrigeration maintenance checklist in three columns. Monthly, done by staff: brush condenser coils, dollar bill gasket test, check the coil for ice, clear vents and drains. Quarterly, done by a tech: service condensing units, check for leaks, test the defrost cycle, descale in hard water. Twice a year, done by a tech: full ice machine sanitize, calibrate thermostats, inspect doors and heaters, pre-summer coil service.">
+  <defs>
+    <radialGradient id="rg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+    <g id="cb">
+      <rect x="0" y="0" width="24" height="24" rx="6" fill="#0A1620" stroke="#4FD1E9" stroke-width="2.5"/>
+      <path d="M6 12.5 L10.5 17 L18.5 7.5" fill="none" stroke="#4FD1E9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <text x="60" y="68" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#F5F9FB">Refrigeration maintenance checklist</text>
+
+  <g fill="#0F2330" stroke="#2C4A57" stroke-width="3">
+    <rect x="60" y="100" width="340" height="455" rx="14"/>
+    <rect x="430" y="100" width="340" height="455" rx="14"/>
+    <rect x="800" y="100" width="340" height="455" rx="14"/>
+  </g>
+  <g stroke="#2C4A57" stroke-width="2">
+    <path d="M84 196 H376"/><path d="M454 196 H746"/><path d="M824 196 H1116"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="88" y="148" font-size="27" font-weight="700" fill="#4FD1E9">Monthly</text>
+    <text x="88" y="176" font-size="16" letter-spacing="1.5" fill="#7C93A6">YOUR STAFF</text>
+    <text x="458" y="148" font-size="27" font-weight="700" fill="#F5F9FB">Quarterly</text>
+    <text x="458" y="176" font-size="16" letter-spacing="1.5" fill="#7C93A6">A TECH</text>
+    <text x="828" y="148" font-size="27" font-weight="700" fill="#F5F9FB">Twice a year</text>
+    <text x="828" y="176" font-size="16" letter-spacing="1.5" fill="#7C93A6">A TECH</text>
+  </g>
+
+  <use href="#cb" x="88" y="232"/><use href="#cb" x="88" y="312"/><use href="#cb" x="88" y="392"/><use href="#cb" x="88" y="472"/>
+  <use href="#cb" x="458" y="232"/><use href="#cb" x="458" y="312"/><use href="#cb" x="458" y="392"/><use href="#cb" x="458" y="472"/>
+  <use href="#cb" x="828" y="232"/><use href="#cb" x="828" y="312"/><use href="#cb" x="828" y="392"/><use href="#cb" x="828" y="472"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#DCE6EC">
+    <text x="126" y="251">Brush condenser coils</text>
+    <text x="126" y="331">Dollar bill gasket test</text>
+    <text x="126" y="411">Check the coil for ice</text>
+    <text x="126" y="491">Clear vents and drains</text>
+
+    <text x="496" y="251">Service condensing units</text>
+    <text x="496" y="331">Check for leaks</text>
+    <text x="496" y="411">Test the defrost cycle</text>
+    <text x="496" y="491">Descale in hard water</text>
+
+    <text x="866" y="251">Full ice machine sanitize</text>
+    <text x="866" y="331">Calibrate thermostats</text>
+    <text x="866" y="411">Inspect doors and heaters</text>
+    <text x="866" y="491">Pre-summer coil service</text>
+  </g>
+
+  <text x="600" y="598" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#9FB6C4" text-anchor="middle">Daily: log box temps at opening and again at the afternoon peak</text>
+</svg>
