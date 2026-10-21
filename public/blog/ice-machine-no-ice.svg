@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four stages of an ice machine cycle and what fails at each one. Water fill fails from a closed supply valve, a clogged filter, or a stuck inlet valve. Freeze fails from a dirty condenser, a hot room, or low refrigerant. Harvest fails from scale on the evaporator, a stuck hot gas valve, or a stuck curtain switch. Bin fails from a bin sensor stuck on full, a blocked drain, or the bin door left open.">
+  <defs>
+    <radialGradient id="rg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="60" y="68" font-size="32" font-weight="700" fill="#F5F9FB">No ice? Find the stage that stopped</text>
+    <text x="60" y="100" font-size="20" fill="#7C93A6">Every batch runs through all four</text>
+  </g>
+
+  <g stroke="#2C4A57" stroke-width="3" stroke-linecap="round">
+    <path d="M272 212 H318"/><path d="M562 212 H608"/><path d="M852 212 H898"/>
+  </g>
+  <g fill="#2C4A57">
+    <path d="M318 204 l16 8 l-16 8 Z"/><path d="M608 204 l16 8 l-16 8 Z"/><path d="M898 204 l16 8 l-16 8 Z"/>
+  </g>
+
+  <g fill="#0F2330" stroke="#2C4A57" stroke-width="3">
+    <rect x="60" y="140" width="212" height="144" rx="12"/>
+    <rect x="350" y="140" width="212" height="144" rx="12"/>
+    <rect x="640" y="140" width="212" height="144" rx="12"/>
+    <rect x="930" y="140" width="212" height="144" rx="12"/>
+  </g>
+
+  <g stroke="#4FD1E9" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M166 176 c-18 22 -26 34 -26 44 a26 26 0 0 0 52 0 c0 -10 -8 -22 -26 -44 Z"/>
+    <path d="M456 180 v52 M430 206 h52 M437 188 l38 36 M475 188 l-38 36"/>
+    <path d="M746 224 v22 M736 236 l10 10 l10 -10" stroke-linejoin="round"/>
+  </g>
+  <rect x="730" y="176" width="32" height="32" rx="6" fill="none" stroke="#4FD1E9" stroke-width="3.5"/>
+  <g fill="none" stroke="#4FD1E9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1004 184 h92 l-14 56 h-64 Z"/>
+  </g>
+  <g fill="#4FD1E9" fill-opacity="0.85">
+    <rect x="1022" y="206" width="20" height="20" rx="4"/>
+    <rect x="1050" y="212" width="20" height="20" rx="4"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="166" y="268" font-size="22" font-weight="700" fill="#F5F9FB">1. Water fill</text>
+    <text x="456" y="268" font-size="22" font-weight="700" fill="#F5F9FB">2. Freeze</text>
+    <text x="746" y="268" font-size="22" font-weight="700" fill="#F5F9FB">3. Harvest</text>
+    <text x="1036" y="268" font-size="22" font-weight="700" fill="#F5F9FB">4. Bin</text>
+  </g>
+
+  <g stroke="#4A6474" stroke-width="2" stroke-dasharray="5 5">
+    <path d="M166 284 V330"/><path d="M456 284 V330"/><path d="M746 284 V330"/><path d="M1036 284 V330"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="60" y="360" font-size="17" font-weight="700" letter-spacing="1.5" fill="#4FD1E9">WHAT STOPS IT HERE</text>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#DCE6EC" text-anchor="middle">
+    <text x="166" y="408">Supply valve closed</text>
+    <text x="166" y="446">Clogged water filter</text>
+    <text x="166" y="484">Stuck inlet valve</text>
+
+    <text x="456" y="408">Dirty condenser</text>
+    <text x="456" y="446">Room too hot</text>
+    <text x="456" y="484">Low refrigerant</text>
+
+    <text x="746" y="408">Scale on evaporator</text>
+    <text x="746" y="446">Hot gas valve stuck</text>
+    <text x="746" y="484">Curtain switch stuck</text>
+
+    <text x="1036" y="408">Bin sensor stuck full</text>
+    <text x="1036" y="446">Drain blocked</text>
+    <text x="1036" y="484">Bin door left open</text>
+  </g>
+
+  <text x="600" y="580" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#9FB6C4" text-anchor="middle">Watch one full cycle before you call. Where it stops tells the tech where to start.</text>
+</svg>

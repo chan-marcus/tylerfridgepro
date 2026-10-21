@@ -243,6 +243,9 @@ const websiteSchema = {
   }
 
   p { color: var(--silt); }
+  /* Fill each line and guard only the last, so no block ends on a lone word.
+     Firefox ignores pretty, so wording still has to do the real work. */
+  p, li, figcaption, dd { text-wrap: pretty; }
   strong { color: var(--paper); }
   a { color: var(--primary-deep); }
 

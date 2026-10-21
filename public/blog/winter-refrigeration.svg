@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An outdoor condensing unit in cold weather with four winter problems labeled: low head pressure starving the cooler on a cold night, a condensate drain line freezing and backing up, ice and debris blocking the condenser coil, and door gaskets stiffening so they no longer seal.">
+  <defs>
+    <radialGradient id="rg" cx="0.28" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <g stroke="#2C4A57" stroke-width="3" stroke-linecap="round" stroke-opacity="0.75">
+    <path d="M96 86 v44 M78 100 l36 16 M114 100 l-36 16 M84 92 l24 32 M108 92 l-24 32"/>
+    <path d="M470 78 v30 M458 86 l24 14 M482 86 l-24 14"/>
+  </g>
+
+  <rect x="110" y="196" width="330" height="240" rx="14" fill="#0F2330" stroke="#2C4A57" stroke-width="4"/>
+  <rect x="130" y="216" width="128" height="200" rx="8" fill="#0A1620" stroke="#4FD1E9" stroke-width="2.5" stroke-opacity="0.6"/>
+  <g stroke="#4FD1E9" stroke-width="2.5" stroke-opacity="0.55">
+    <path d="M146 216 v200"/><path d="M162 216 v200"/><path d="M178 216 v200"/><path d="M194 216 v200"/><path d="M210 216 v200"/><path d="M226 216 v200"/><path d="M242 216 v200"/>
+  </g>
+  <circle cx="352" cy="316" r="66" fill="#0A1620" stroke="#2C4A57" stroke-width="3"/>
+  <g stroke="#7C93A6" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M352 316 q34 -28 2 -50"/>
+    <path d="M352 316 q-10 42 -46 26"/>
+    <path d="M352 316 q-24 -34 20 34"/>
+  </g>
+  <circle cx="352" cy="316" r="9" fill="#4FD1E9"/>
+
+  <g fill="#8BE7F5" fill-opacity="0.8">
+    <path d="M130 212 q16 10 32 0 q16 -10 32 0 q16 10 32 0 q16 -10 32 0 l0 -12 h-128 Z"/>
+  </g>
+
+  <rect x="150" y="436" width="250" height="18" rx="5" fill="#1B3140"/>
+  <path d="M262 454 v44 h150" stroke="#4FD1E9" stroke-width="7" fill="none" stroke-linecap="round" stroke-opacity="0.8"/>
+  <ellipse cx="372" cy="498" rx="22" ry="9" fill="#8BE7F5" fill-opacity="0.85"/>
+
+  <g fill="none" stroke="#4A6474" stroke-width="2" stroke-dasharray="5 5">
+    <path d="M424 250 H560"/>
+    <path d="M424 500 H560"/>
+    <path d="M268 206 H300 V176 H560"/>
+    <path d="M446 380 H560"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <circle cx="592" cy="176" r="19" fill="#4FD1E9"/>
+    <text x="592" y="184" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">1</text>
+    <text x="624" y="172" font-size="23" font-weight="700" fill="#F5F9FB">Ice on the coil</text>
+    <text x="624" y="198" font-size="18" fill="#7C93A6">Sleet, leaves, and grit choke off the airflow</text>
+
+    <circle cx="592" cy="250" r="19" fill="#4FD1E9"/>
+    <text x="592" y="258" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">2</text>
+    <text x="624" y="246" font-size="23" font-weight="700" fill="#F5F9FB">Low head pressure</text>
+    <text x="624" y="272" font-size="18" fill="#7C93A6">On a cold night the system cannot feed the coil</text>
+
+    <circle cx="592" cy="380" r="19" fill="#4FD1E9"/>
+    <text x="592" y="388" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">3</text>
+    <text x="624" y="376" font-size="23" font-weight="700" fill="#F5F9FB">Stiff door gaskets</text>
+    <text x="624" y="402" font-size="18" fill="#7C93A6">Cold rubber hardens and stops sealing</text>
+
+    <circle cx="592" cy="500" r="19" fill="#4FD1E9"/>
+    <text x="592" y="508" font-size="21" font-weight="700" fill="#04222B" text-anchor="middle">4</text>
+    <text x="624" y="496" font-size="23" font-weight="700" fill="#F5F9FB">Frozen drain line</text>
+    <text x="624" y="522" font-size="18" fill="#7C93A6">Condensate backs up and overflows the pan</text>
+  </g>
+</svg>

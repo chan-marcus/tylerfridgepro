@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three ways a commercial freezer fails to hold zero degrees. Cold but not cold enough, which points to a dirty condenser coil, a failing gasket, or low refrigerant. Running nonstop and still warm, which points to an iced evaporator, a defrost fault, or a blocked air return. Not running at all, which points to power, a control, or the compressor.">
+  <defs>
+    <radialGradient id="rg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="60" y="68" font-size="32" font-weight="700" fill="#F5F9FB">Freezer not holding 0&#176;F?</text>
+    <text x="60" y="100" font-size="20" fill="#7C93A6">Which of these three is it?</text>
+  </g>
+
+  <g fill="#0F2330" stroke="#2C4A57" stroke-width="3">
+    <rect x="60" y="136" width="340" height="396" rx="14"/>
+    <rect x="430" y="136" width="340" height="396" rx="14"/>
+    <rect x="800" y="136" width="340" height="396" rx="14"/>
+  </g>
+
+  <g stroke="#4FD1E9" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M230 184 v56 M202 200 l56 24 M258 200 l-56 24"/>
+    <path d="M600 186 A30 30 0 1 1 570 216"/>
+    <path d="M590 176 l12 10 l-12 10" stroke-linejoin="round"/>
+  </g>
+  <circle cx="970" cy="212" r="30" fill="none" stroke="#7C93A6" stroke-width="3.5"/>
+  <path d="M949 191 L991 233" stroke="#7C93A6" stroke-width="3.5" stroke-linecap="round"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="230" y="300" font-size="23" font-weight="700" fill="#4FD1E9">Cold, but not</text>
+    <text x="230" y="328" font-size="23" font-weight="700" fill="#4FD1E9">cold enough</text>
+    <text x="600" y="300" font-size="23" font-weight="700" fill="#4FD1E9">Running nonstop,</text>
+    <text x="600" y="328" font-size="23" font-weight="700" fill="#4FD1E9">still warm</text>
+    <text x="970" y="314" font-size="23" font-weight="700" fill="#C9D6DE">Not running at all</text>
+  </g>
+
+  <g stroke="#2C4A57" stroke-width="2">
+    <path d="M100 356 H360"/><path d="M470 356 H730"/><path d="M840 356 H1100"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#DCE6EC">
+    <text x="100" y="394">Condenser coil packed</text>
+    <text x="100" y="440">Door gasket not sealing</text>
+    <text x="100" y="486">Refrigerant running low</text>
+
+    <text x="470" y="394">Evaporator iced over</text>
+    <text x="470" y="440">Defrost cycle failing</text>
+    <text x="470" y="486">Air return blocked</text>
+
+    <text x="840" y="394">Breaker or power</text>
+    <text x="840" y="440">Thermostat or control</text>
+    <text x="840" y="486">Compressor failure</text>
+  </g>
+
+  <text x="600" y="586" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#9FB6C4" text-anchor="middle">Judge a freezer on whether food is frozen solid, not on the number on the dial</text>
+</svg>

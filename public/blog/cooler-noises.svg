@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five noises a commercial cooler makes and what each one usually means. Rattling or buzzing means a loose panel, guard, or fan mount. Squealing or screeching means a worn fan motor bearing. Rapid clicking means the compressor is trying to start and failing. Hissing or gurgling is often normal, but constant hissing can mean a leak. Banging or knocking means a loose compressor mount or internal wear.">
+  <defs>
+    <radialGradient id="rg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FBDDA" stop-opacity="0.14"/>
+      <stop offset="0.6" stop-color="#0B1520" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1520"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="60" y="68" font-size="32" font-weight="700" fill="#F5F9FB">What that noise means</text>
+    <text x="60" y="100" font-size="20" fill="#7C93A6">Five sounds, five different problems</text>
+  </g>
+
+  <g stroke="#2C4A57" stroke-width="2">
+    <path d="M60 212 H1140"/><path d="M60 300 H1140"/><path d="M60 388 H1140"/><path d="M60 476 H1140"/>
+  </g>
+
+  <g stroke="#4FD1E9" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M70 168 v-14 M86 168 v-26 M102 168 v-8 M118 168 v-22 M134 168 v-12 M150 168 v-20"/>
+    <path d="M70 256 v-30 M86 256 v-10 M102 256 v-34 M118 256 v-14 M134 256 v-28 M150 256 v-8"/>
+    <path d="M70 344 v-26 M86 344 v-6 M102 344 v-26 M118 344 v-6 M134 344 v-26 M150 344 v-6"/>
+    <path d="M70 432 v-12 M86 432 v-16 M102 432 v-11 M118 432 v-17 M134 432 v-12 M150 432 v-15"/>
+    <path d="M70 520 v-8 M86 520 v-38 M102 520 v-10 M118 520 v-6 M134 520 v-36 M150 520 v-9"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="196" y="162" font-size="25" font-weight="700" fill="#4FD1E9">Rattling or buzzing</text>
+    <text x="196" y="190" font-size="19" fill="#9FB6C4">A loose panel, fan guard, or fan mount vibrating</text>
+
+    <text x="196" y="250" font-size="25" font-weight="700" fill="#4FD1E9">Squealing or screeching</text>
+    <text x="196" y="278" font-size="19" fill="#9FB6C4">A fan motor bearing wearing out, often before it seizes</text>
+
+    <text x="196" y="338" font-size="25" font-weight="700" fill="#4FD1E9">Rapid clicking</text>
+    <text x="196" y="366" font-size="19" fill="#9FB6C4">The compressor trying to start and failing. Call on this one.</text>
+
+    <text x="196" y="426" font-size="25" font-weight="700" fill="#4FD1E9">Hissing or gurgling</text>
+    <text x="196" y="454" font-size="19" fill="#9FB6C4">Usually just refrigerant moving. Constant hissing can be a leak.</text>
+
+    <text x="196" y="514" font-size="25" font-weight="700" fill="#4FD1E9">Banging or knocking</text>
+    <text x="196" y="542" font-size="19" fill="#9FB6C4">A loose compressor mount, or wear inside the compressor</text>
+  </g>
+
+  <text x="600" y="600" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#7C93A6" text-anchor="middle">A new noise is the equipment asking for attention before it stops</text>
+</svg>
