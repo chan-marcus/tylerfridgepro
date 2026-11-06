@@ -163,6 +163,108 @@ const websiteSchema = {
       n.addEventListener('click', (e) => { if (e.target.closest('a')) set(false); });
     })();
   </script>
+  <!-- Line fitting. The build joins the words around each sentence break
+       with no-break spaces (scripts/typeset.mjs). That keeps sentences off
+       line edges, but on a narrow screen it can leave short lines mid-
+       paragraph. For each paragraph this tries the joined and unjoined text
+       at a few near-invisible letter-spacing steps, and keeps whichever reads
+       best at the reader's actual width: a sentence near a line edge costs
+       3, a stub last line 2, a lone last word 4, a short inner line 1, and
+       text overflowing its column 100. Proper nouns (.pn) are never unbound. -->
+  <script is:inline>
+    (function () {
+      var STEPS = [0, -0.006, 0.006, -0.012, 0.012, -0.018, 0.018, -0.024, 0.024, -0.03, 0.03];
+      var END = /[.?!]["')\u201d]?$/;
+      var NB = /\u00a0/g;
+      var saved = new WeakMap();
+      function lines(el) {
+        var out = [], walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n, m, re;
+        while ((n = walker.nextNode())) {
+          re = /[^\s\u00a0]+/g;
+          while ((m = re.exec(n.data))) {
+            var r = document.createRange();
+            r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length);
+            var rc = r.getClientRects();
+            if (!rc.length) continue;
+            var top = Math.round(rc[0].top), last = out[out.length - 1];
+            var w = { w: m[0], l: rc[0].left, r: rc[rc.length - 1].right };
+            if (last && Math.abs(last.top - top) < 6) last.ws.push(w); else out.push({ top: top, ws: [w] });
+          }
+        }
+        return out;
+      }
+      function score(el) {
+        var L = lines(el);
+        if (L.length < 2) return 0;
+        var cs = getComputedStyle(el);
+        var box = el.getBoundingClientRect().width - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        var s = 0, width = 0, right = el.getBoundingClientRect().right - parseFloat(cs.paddingRight);
+        L.forEach(function (l) {
+          width = Math.max(width, l.ws[l.ws.length - 1].r - l.ws[0].l);
+          if (l.ws[l.ws.length - 1].r > right + 1) s += 100; // a joined run overflowing its column
+        });
+        var lastL = L[L.length - 1], lw = lastL.ws[lastL.ws.length - 1].r - lastL.ws[0].l;
+        if (lastL.ws.length === 1) s += 4;
+        else if (lw < width * 0.3) s += 2;
+        L.forEach(function (l, i) {
+          var ws = l.ws, k;
+          if (i > 0) for (k = 0; k < Math.min(2, ws.length - 1); k++) if (END.test(ws[k].w)) s += 3;
+          if (i < L.length - 1) {
+            for (k = Math.max(1, ws.length - 2); k < ws.length; k++) if (END.test(ws[k - 1].w)) s += 3;
+            if (L.length > 2 && ws[ws.length - 1].r - ws[0].l < box * 0.62) s += 1;
+          }
+        });
+        return s;
+      }
+      // Joined (as built) or unjoined text. Unjoining keeps the paragraph's
+      // final no-break space, which holds the last two words together.
+      function textNodes(el) {
+        var out = [], w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), n;
+        while ((n = w.nextNode())) out.push(n);
+        return out;
+      }
+      function setJoined(el, on) {
+        var nodes = textNodes(el), lastNode = null, i;
+        for (i = nodes.length - 1; i >= 0; i--) if (nodes[i].data.indexOf('\u00a0') > -1) { lastNode = nodes[i]; break; }
+        nodes.forEach(function (n) {
+          if (!saved.has(n)) saved.set(n, n.data);
+          var orig = saved.get(n);
+          if (on) { n.data = orig; return; }
+          if (n === lastNode) {
+            var cut = orig.lastIndexOf('\u00a0');
+            n.data = orig.slice(0, cut).replace(NB, ' ') + orig.slice(cut);
+          } else n.data = orig.replace(NB, ' ');
+        });
+        el.querySelectorAll('.nw').forEach(function (x) { x.style.whiteSpace = on ? '' : 'normal'; });
+      }
+      function fit() {
+        var els = document.querySelectorAll('main p, main li, main .sent, .footer-legal p');
+        for (var i = 0; i < els.length; i++) {
+          var el = els[i];
+          if (!el.getClientRects().length || el.querySelector('.sent')) continue;
+          var joins = el.textContent.indexOf('\u00a0') > -1 ? [true, false] : [true];
+          var best = Infinity, bestJ = true, bestStep = 0;
+          for (var a = 0; a < joins.length && best > 0; a++) {
+            setJoined(el, joins[a]);
+            for (var j = 0; j < STEPS.length && best > 0; j++) {
+              el.style.letterSpacing = STEPS[j] ? STEPS[j] + 'em' : '';
+              var s = score(el) + (joins[a] ? 0 : 0.5);
+              if (s < best) { best = s; bestJ = joins[a]; bestStep = STEPS[j]; }
+            }
+          }
+          setJoined(el, bestJ);
+          el.style.letterSpacing = bestStep ? bestStep + 'em' : '';
+        }
+      }
+      var t, lastW = window.innerWidth;
+      (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(fit);
+      window.addEventListener('resize', function () {
+        if (window.innerWidth === lastW) return;
+        lastW = window.innerWidth;
+        clearTimeout(t); t = setTimeout(fit, 150);
+      });
+    })();
+  </script>
 </body>
 </html>
 
@@ -216,6 +318,9 @@ const websiteSchema = {
   /* Phones: the whole site is set at 90% (Marcus's rule for every site). Sizes
      are rem, so type and spacing shrink together; breakpoints stay put. */
   @media (max-width: 639.98px) { html { font-size: 90%; } }
+  /* Bound by scripts/typeset.mjs at build time: .pn is a proper noun, .nw a
+     hyphenated word inside a joined run. */
+  .nw, .pn { white-space: nowrap; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -245,6 +350,7 @@ const websiteSchema = {
   h3 {
     font-family: var(--font-display); font-weight: 600; font-size: 1.08rem;
     letter-spacing: -0.015em; color: var(--paper); line-height: 1.35;
+    text-wrap: balance;
   }
 
   p { color: var(--silt); }

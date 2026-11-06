@@ -93,7 +93,7 @@ export const SERVICES: Service[] = [
     icon: 'pipe',
     h1: 'Commercial Ice Machine Repair in Tyler',
     signs: [
-      'Ice comes out cloudy, soft, or smaller than it used to',
+      'Ice comes out cloudy, soft or undersized',
       'Production has dropped and you run out during a rush',
       'The machine will not finish a harvest cycle',
       'Water leaking around the base or the bin',
@@ -166,7 +166,7 @@ export const SERVICES: Service[] = [
       'It has been more than a year since your last service',
       'Energy bills creeping up with no change in use',
       'Condenser coils you can see packed with dust and grease',
-      'Units getting louder, icing more, or struggling in the heat',
+      'Units getting louder, icing up more often, or struggling to hold temperature in the heat',
       'A health inspection coming up on the calendar'
     ],
     causes: [

@@ -19,7 +19,7 @@ Then stand still and listen. Is the unit running? That one question splits the p
 The box is holding somewhere in the teens or twenties, the compressor cycles normally, and nothing sounds wrong. The system is working, it just cannot get all the way down. Three things cause most of this:
 
 - **A packed condenser coil.** The coil has to shed heat, and it cannot do that through a blanket of dust and grease. This is the single most common cause, and it is the one you can check yourself.
-- **A door gasket that no longer seals.** Close the door on a dollar bill and pull. If it slides out freely, warm air is bleeding in all day.
+- **A door gasket that no longer seals.** Close the door on a dollar bill and pull. If it slides out with no drag, warm air is leaking in around that door all day.
 - **Refrigerant running low.** A slow leak shows up as a box that used to hold zero and now settles at fifteen. This one needs a tech, because the refrigerant went somewhere.
 
 ## Case 2: running nonstop, still warm
