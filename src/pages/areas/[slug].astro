@@ -76,7 +76,7 @@ const breadcrumb = {
         {topServices.map((s) => (
           <a class="card" href={`/services/${s.slug}/${city.slug}/`}>
             <ServiceIcon icon={s.icon} />
-            <h3>{s.name}</h3>
+            <h3>{s.card ?? s.name}</h3>
             <p>{s.short}</p>
             <span class="card-cta">DETAILS &rarr;</span>
           </a>

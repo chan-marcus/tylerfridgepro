@@ -48,7 +48,7 @@ export const CITIES: City[] = [
     localRisks: [
       { title: 'Summer heat on rooftop units', body: 'Exposed condensers on Whitehouse storefronts take the full East Texas sun and need clean coils to survive it.' },
       { title: 'Hard-water ice machine scale', body: 'Local water hardness fouls ice machines here just like in Tyler, cutting production and cube quality.' },
-      { title: 'Single-unit dependence', body: 'Smaller Whitehouse operators often run one critical cooler or freezer, so a single failure puts all their product at risk.' }
+      { title: 'Reliance on one unit', body: 'Smaller Whitehouse operators often run one critical cooler or freezer, so a single failure puts all their product at risk.' }
     ],
     neighborhoods: ['Downtown Whitehouse', 'Highway 110 corridor', 'Main Street', 'Mozelle', 'Wildcat area', 'Brookdale', 'Estates of Whitehouse', 'Southside']
   },
@@ -141,7 +141,7 @@ export const CITIES: City[] = [
       'Techs serve Arp as part of the Tyler service area, so even out here a warm walk-in or a down ice machine gets local, 24/7 response instead of a long wait for someone to drive in.'
     ],
     localRisks: [
-      { title: 'Single-unit small businesses', body: 'Arp operators often depend on one critical cooler or freezer, so a single breakdown threatens all their product.' },
+      { title: 'Small shops, one cooler', body: 'Arp operators often depend on one critical cooler or freezer, so a single breakdown threatens all their product.' },
       { title: 'Summer heat on aging equipment', body: 'Small-town kitchens often run older units that struggle when East Texas heat loads the condensers.' },
       { title: 'Hard-water ice scale', body: 'Ice machines here face the same regional hard-water scaling that cuts production and cube quality.' }
     ],
@@ -160,7 +160,7 @@ export const CITIES: City[] = [
       'Techs cover Winona as part of the Tyler service area, with 24/7 dispatch for the I-20 travel stops and the local stores and kitchens around town.'
     ],
     localRisks: [
-      { title: 'Nonstop highway operation', body: 'I-20 truck stops and C-stores run refrigeration 24/7, so wear builds fast and failures come at all hours.' },
+      { title: 'Truck stops that never close', body: 'I-20 truck stops and C-stores run refrigeration 24/7, so wear builds fast and failures come at all hours.' },
       { title: 'High-volume ice demand', body: 'Travel-stop ice machines move huge volumes and scale up quickly in the local hard water.' },
       { title: 'Summer condenser strain', body: 'Constant traffic and door openings plus East Texas heat load reach-ins and coolers hard through summer.' }
     ],

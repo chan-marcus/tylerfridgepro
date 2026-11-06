@@ -5,6 +5,7 @@
 export interface Service {
   slug: string;
   name: string;
+  card?: string;        // shorter title for service cards, one line at every width (defaults to name)
   short: string;        // card blurb
   icon: string;
   h1: string;
@@ -54,6 +55,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'reach-in-cooler-freezer-repair',
     name: 'Reach-In Cooler & Freezer Repair',
+    card: 'Reach-In Repair',
     short: 'Undercounters, prep tables, and reach-in merchandisers that will not hold temp, back in service quickly.',
     icon: 'appliance',
     h1: 'Reach-In Cooler & Freezer Repair',
@@ -89,6 +91,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'commercial-ice-machine-repair',
     name: 'Commercial Ice Machine Repair',
+    card: 'Ice Machine Repair',
     short: 'Low output, thin or cloudy cubes, and no-ice failures on commercial ice machines, cleared fast.',
     icon: 'pipe',
     h1: 'Commercial Ice Machine Repair in Tyler',
@@ -159,6 +162,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'refrigeration-preventive-maintenance',
     name: 'Refrigeration Preventive Maintenance',
+    card: 'Routine Maintenance',
     short: 'Scheduled coil cleaning, gasket checks, and system tune-ups that stop breakdowns before they start.',
     icon: 'claim',
     h1: 'Refrigeration Preventive Maintenance',
@@ -194,6 +198,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'emergency-refrigeration-service',
     name: 'Emergency Refrigeration Service',
+    card: 'Emergency Service',
     short: '24/7 response when a cooler, freezer, or ice machine goes down and product is on the line.',
     icon: 'storm',
     h1: 'Emergency Refrigeration Service in Tyler, TX',
@@ -229,6 +234,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'refrigeration-installation',
     name: 'Refrigeration Installation',
+    card: 'New Installations',
     short: 'New walk-ins, reach-ins, and ice machines sized, installed, and started up right the first time.',
     icon: 'extract',
     h1: 'Commercial Refrigeration Installation',
@@ -265,6 +271,7 @@ export const SERVICES: Service[] = [
   {
     slug: 'display-case-repair',
     name: 'Display Case & Merchandiser Repair',
+    card: 'Display Case Repair',
     short: 'Open merchandisers, deli and grocery display cases, and glass-door coolers that will not hold temp or keep fogging over.',
     icon: 'appliance',
     h1: 'Display Case & Merchandiser Repair in Tyler, TX',
